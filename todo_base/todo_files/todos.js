@@ -59,6 +59,16 @@ $(function(){
       return this.last().get('order') + 1;
     },
 
+	//added to remove bottom tile
+	lastInOrder: function() {
+		console.log('in kill bottom');
+		//console.log(this.last());
+		//console.log(this.last());  //.model.toJSON());
+		//this.last().clear(); //model.destroy();
+		return this.last();
+		
+	},
+	
     // Todos are sorted by their original insertion order.
     comparator: 'order'
 
@@ -66,10 +76,6 @@ $(function(){
 
   // Create our global collection of **Todos**.
   var Todos = new TodoList;
-  function print_out() {
-	console.log("hello");
-  }
-  print_out();
   
   // Todo Item View
   // --------------
@@ -126,15 +132,6 @@ $(function(){
       this.input.focus();
     },
 	
-	/*sut_play: function() {
-		//function() {
-		setTimeout(1000);
-		(this.$el).animate({'opacity':'.1'},1000);
-		setTimeout(1000);
-		(this.$el).animate({'opacity':'.9'},1000);
-		console.log('mic checkl');
-		//}
-	},*/
 	
     // Close the `"editing"` mode, saving changes to the todo.
     close: function() {
@@ -248,17 +245,19 @@ $(function(){
 	  switch(e.keyCode) {
 		
 		case 113:
-		Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-		console.log('a regular create with a 113');
-		return;
+			Todos.create({title: this.input.val(), currentSearch: this.input.val()});
+			console.log('a regular create with a 113');
+			return;
 		case 119:
-		console.log('dubya');
-		return;
+			//Destroy bottom tile
+			console.log('dubya');
+			Todos.lastInOrder().destroy();
+			return;
 	  // } else {
 	    case 13:
-		Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-		console.log('a regular create with return');
-		this.input.val('');
+			Todos.create({title: this.input.val(), currentSearch: this.input.val()});
+			console.log('a regular create with return');
+			this.input.val('');
 		return;
 	    //debuggingVal = this.input.val();
 	  }
