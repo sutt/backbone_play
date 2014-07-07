@@ -2,8 +2,10 @@
 <!-- saved from url=(0047)http://backbonejs.org/examples/todos/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>Backbone.js Todos</title>
-  <link rel="stylesheet" href="http://backbonejs.org/examples/todos/todos.css">
+  <title>SUT Intellisense</title>
+  <link rel="stylesheet" href="./todo2_files/todos.css">
+  <!-- <script type="text/javascript"> var debuggingVal = "";</script> -->
+  
 </head>
 
 <body>
@@ -11,55 +13,61 @@
   <div id="todoapp">
 
     <header>
-      <h1>Todos</h1>
+      <h1>INTELLI - SENSE</h1>
       <input id="new-todo" type="text" placeholder="What needs to be done?">
     </header>
 
-    <section id="main" style="display: none;">
-      <input id="toggle-all" type="checkbox">
+    <section  id="main" style="display: none;">
+      
+	  <!--
+	  <input id="toggle-all" type="checkbox"> 
       <label for="toggle-all">Mark all as complete</label>
+	  -->
       <ul id="todo-list"></ul>
     </section>
 
     <footer style="display: none;">
-      <a id="clear-completed">Clear completed</a>
+      <input id="input-clear-completed" type="button"> Clear Completed in An Input </input> 
+	  <!-- <a id="clear-completed">Clear completed</a> -->
       <div id="todo-count"></div>
     </footer>
 
   </div>
 
   <div id="instructions">
-    Double-click to edit a todo.
+    Proof of Concept for Intellisense Search
   </div>
 
   <div id="credits">
     Created by
     <br>
     <a href="http://jgn.me/">Jérôme Gravel-Niquet</a>.
-    <br>Rewritten by: <a href="http://addyosmani.github.com/todomvc">TodoMVC</a>.
+    <br>Hacked by: <a href="http://addyosmani.github.com/sutt">SUT</a>.
   </div>
 
-  <script src="./todo_files/json2.js"></script>
-  <script src="./todo_files/jquery.js"></script>
-  <script src="./todo_files/underscore.js"></script>
-  <script src="./todo_files/backbone.js"></script>
-  <script src="./todo_files/backbone.localStorage.js"></script>
-  <script src="./todo_files/todos.js"></script>
-
+  <script src="./todo2_files/json2.js"></script>
+  <script src="./todo2_files/jquery.js"></script>
+  <script src="./todo2_files/underscore.js"></script>
+  <script src="./todo2_files/backbone.js"></script>
+  <script src="./todo2_files/backbone.localStorage.js"></script>
+  <script src="./todo2_files/todos.js"></script>
+  <!-- <script src="./todo2_files/sut1.js"></script> -->
+  <!--  <script src="./todo2_files/sut2.js"></script> -->
   <!-- Templates -->
 
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-      <label><%- title %></label>
-      <a class="destroy"></a>
+      <label><%- currentSearch%> </label>
+      <!-- <a class="sut_play">Click here </a> -->
+	  <a class="destroy"></a> 
     </div>
     <input class="edit" type="text" value="<%- title %>" />
   </script>
 
   <script type="text/template" id="stats-template">
     <% if (done) { %>
-      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+      <a  id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
     <% } %>
     <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
   </script>
