@@ -17,8 +17,7 @@ $(function(){
       return {
         title: "empty todo...",
         order: Todos.nextOrder(),
-        done: false,
-		currentSearch: ""
+        done: false
       };
     },
 
@@ -89,20 +88,13 @@ $(function(){
       "dblclick .view"  : "edit",
       "click a.destroy" : "clear",
       "keypress .edit"  : "updateOnEnter",
-      "blur .edit"      : "close",
-	  "click a.sut_play" : "sut_play"
+      "blur .edit"      : "close"
     },
 
-	// Todo.View is the view of our results, the model is of the individual search terms
-	// What we need is a model of a search result to encapsulate the individual items
-	// 
-	
     // The TodoView listens for changes to its model, re-rendering. Since there's
     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
     // app, we set a direct reference on the model for convenience.
-    
-	
-	initialize: function() {
+    initialize: function() {
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
     },
@@ -125,17 +117,7 @@ $(function(){
       this.$el.addClass("editing");
       this.input.focus();
     },
-	
-	/*sut_play: function() {
-		//function() {
-		setTimeout(1000);
-		(this.$el).animate({'opacity':'.1'},1000);
-		setTimeout(1000);
-		(this.$el).animate({'opacity':'.9'},1000);
-		console.log('mic checkl');
-		//}
-	},*/
-	
+
     // Close the `"editing"` mode, saving changes to the todo.
     close: function() {
       var value = this.input.val();
@@ -149,10 +131,7 @@ $(function(){
 
     // If you hit `enter`, we're through editing the item.
     updateOnEnter: function(e) {
-      myKeyCode = e.keyCode;
-	  //alert(myKeyCode);
-	  //if (e.keyCode == 13) this.close();
-	  if (e.keyCode == 13) this.close()
+      if (e.keyCode == 13) this.close();
     },
 
     // Remove the item, destroy the model.
@@ -185,12 +164,10 @@ $(function(){
     // At initialization we bind to the relevant events on the `Todos`
     // collection, when items are added or changed. Kick things off by
     // loading any preexisting todos that might be saved in *localStorage*.
-	
-	//Here we need
     initialize: function() {
 
       this.input = this.$("#new-todo");
-      //this.allCheckbox = this.$("#toggle-all")[0];
+      this.allCheckbox = this.$("#toggle-all")[0];
 
       this.listenTo(Todos, 'add', this.addOne);
       this.listenTo(Todos, 'reset', this.addAll);
@@ -199,7 +176,7 @@ $(function(){
       this.footer = this.$('footer');
       this.main = $('#main');
 
-      Todos.fetch();  //So fetch knows to goto localStorage because the definition of todos
+      Todos.fetch();
     },
 
     // Re-rendering the App just means refreshing the statistics -- the rest
@@ -217,7 +194,7 @@ $(function(){
         this.footer.hide();
       }
 
-      //this.allCheckbox.checked = !remaining;
+      this.allCheckbox.checked = !remaining;
     },
 
     // Add a single todo item to the list by creating a view for it, and
@@ -235,35 +212,12 @@ $(function(){
     // If you hit return in the main input field, create new **Todo** model,
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
-      console.log(e.keyCode);
-	  
-	  //if (e.keyCode == 40) console.log('down arrow');  //This keyPress is unavailable in the scope of e in this function, maybe because it's an input box
-	  //debuggingVal = this.input.val();
+      if (e.keyCode != 13) return;
+      if (!this.input.val()) return;
 
-	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
-	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119))) return;	  
-	  //if (!this.input.val()) return;
-	  
-	  //if (e.keyCode == 113) {
-	  switch(e.keyCode) {
-		
-		case 113:
-		Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-		console.log('a regular create with a 113');
-		return;
-		case 119:
-		console.log('dubya');
-		return;
-	  // } else {
-	    case 13:
-		Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-		console.log('a regular create with return');
-		this.input.val('');
-		return;
-	    //debuggingVal = this.input.val();
-	  }
-	  
-	  
+      Todos.create({title: this.input.val()});
+	  //Todos.create({title: 'Anti-Task: ' + this.input.val(), done:true, order: 999});
+      this.input.val('');
     },
 
     // Clear all done todo items, destroying their models.
@@ -273,7 +227,7 @@ $(function(){
     },
 
     toggleAllComplete: function () {
-      //var done = this.allCheckbox.checked;
+      var done = this.allCheckbox.checked;
       Todos.each(function (todo) { todo.save({'done': done}); });
     }
 
