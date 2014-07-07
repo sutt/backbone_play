@@ -238,7 +238,7 @@ $(function(){
 	  //debuggingVal = this.input.val();
 
 	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
-	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119))) return;	  
+	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119) && (e.keyCode != 122) )) return;	  
 	  //if (!this.input.val()) return;
 	  
 	  //if (e.keyCode == 113) {
@@ -252,6 +252,11 @@ $(function(){
 			//Destroy bottom tile
 			console.log('dubya');
 			Todos.lastInOrder().destroy();
+			this.input.val('');
+			return;
+		case 122:
+			//z: search
+			console.log(_.filter( ["sut", "nes", "genospace"], function(x) { return (x.search("e") > -1); } ));
 			return;
 	  // } else {
 	    case 13:
