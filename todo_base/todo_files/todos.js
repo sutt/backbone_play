@@ -246,7 +246,7 @@ $(function(){
 		
 		case 113:
 			Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-			console.log('a regular create with a 113');
+			console.log(this.input.val());
 			return;
 		case 119:
 			//Destroy bottom tile
