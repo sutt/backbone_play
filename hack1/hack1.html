@@ -39,7 +39,10 @@
 
     <header>
       <h1>INTELLI - SENSE</h1>
-      <input id="new-todo" type="text" placeholder="What needs to be done?">
+	  <div id="instructions">
+		Proof of Concept for Intellisense Search
+	  </div>
+	  <input id="new-todo" type="text" placeholder="What needs to be done?">
     </header>
 
     <section  id="main" style="display: none;">
@@ -59,18 +62,16 @@
 
   </div>
 
-  <div id="instructions">
-    Proof of Concept for Intellisense Search
-  </div>
+  
 
   <div id="credits">
     <br>Hacked by: <a href="http://github.com/sutt">SUT</a>.
   </div>
 	
-	<form>
+  <form>
 	  <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
 	  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
-	</form>
+  </form>
   
   <script src="./todo_files/json2.js"></script>
   <script src="./todo_files/jquery.js"></script>
@@ -78,8 +79,13 @@
   <script src="./todo_files/backbone.js"></script>
   <script src="./todo_files/backbone.localStorage.js"></script>
   <script src="./todo_files/todos.js"></script>
+  
   <!-- <script src="./todo_files/sut1.js"></script> -->
   <!--  <script src="./todo_files/sut2.js"></script> -->
+  
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="./pie_files/pie.js"> </script>
+  
   <!-- Templates -->
 
   <script type="text/template" id="item-template">
@@ -100,9 +106,5 @@
   </script>
 
 	
-	
-
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-	<script src="./pie.js"> </script>
 </body>
 </html>

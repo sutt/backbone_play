@@ -18,7 +18,7 @@ var width = 960,
 	  .append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-	d3.tsv("data.tsv", type, function(error, data) {
+	d3.tsv("pie_files/data.tsv", type, function(error, data) {
 	  var path = svg.datum(data).selectAll("path")
 		  .data(pie)
 		.enter().append("path")

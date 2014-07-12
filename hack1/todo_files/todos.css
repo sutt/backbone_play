@@ -18,6 +18,7 @@ body {
 	background: #eeeeee;
 	padding: 20px;
 	margin-bottom: 40px;
+	width:300px;
 	/*
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
 	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
@@ -63,7 +64,7 @@ body {
 
 #main {
 	display: none;
-	
+	width: 466px;
 }
 
 #todo-list {
@@ -206,7 +207,8 @@ body {
 }
 
 #instructions {
-	margin: 10px auto;
+	margin-top: -10px;
+	margin-bottom: 20px;
 	color: #777777;
 	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
 	text-align: center;
