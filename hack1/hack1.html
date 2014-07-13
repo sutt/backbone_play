@@ -4,37 +4,16 @@
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <title>Add Todo + PieChart</title>
   
   <link rel="stylesheet" href="./todo_files/todos.css">
-
-	<style>
+  <link rel="stylesheet" href="./pie_files/pie.css">
 		
-		<!--
-		body {
-		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		  margin: auto;
-		  position: relative;
-		  width: 960px;
-		}
-
-		text {
-		  font: 10px sans-serif;
-		}
-		-->
-		
-		form {
-		  position: absolute;
-		  right: 10px;
-		  top: 10px;
-		}
-
-	</style>
 </head>
 
 <body>
 
-	
 	<div id="todoapp">
 
     <header>
@@ -46,32 +25,27 @@
     </header>
 
     <section  id="main" style="display: none;">
-      
-	  <!--
-	  <input id="toggle-all" type="checkbox"> 
-      <label for="toggle-all">Mark all as complete</label>
-	  -->
       <ul id="todo-list"></ul>
     </section>
 
     <footer style="display: none;">
       <input id="input-clear-completed" type="button"> Clear Completed in An Input </input> 
-	  <!-- <a id="clear-completed">Clear completed</a> -->
       <div id="todo-count"></div>
     </footer>
 
   </div>
 
-  
-
   <div id="credits">
     <br>Hacked by: <a href="http://github.com/sutt">SUT</a>.
   </div>
 	
-  <form>
-	  <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
-	  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
+  <form id="apples_form">
+	  <label><input id="apples_input" type="radio" name="dataset" value="apples" checked> Apples</label>
+	  <label><input id="apples_input" type="radio" name="dataset" value="oranges"> Oranges</label>
   </form>
+  
+  <svg id="donut" >
+  </svg>
   
   <script src="./todo_files/json2.js"></script>
   <script src="./todo_files/jquery.js"></script>

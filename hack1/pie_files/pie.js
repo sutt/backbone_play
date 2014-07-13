@@ -1,4 +1,4 @@
-var width = 960,
+var width = 500,
 		height = 500,
 		radius = Math.min(width, height) / 2;
 
@@ -12,9 +12,9 @@ var width = 960,
 		.innerRadius(radius - 100)
 		.outerRadius(radius - 20);
 
-	var svg = d3.select("body").append("svg")
-		.attr("width", width)
-		.attr("height", height)
+	var svg = d3.select("#donut") //.append("svg")
+		//.attr("width", width)
+		//.attr("height", height)
 	  .append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
@@ -26,7 +26,7 @@ var width = 960,
 		  .attr("d", arc)
 		  .each(function(d) { this._current = d; }); // store the initial angles
 
-	  d3.selectAll("input")
+	  d3.selectAll("#apples_input")
 		  .on("change", change);
 
 	  var timeout = setTimeout(function() {
