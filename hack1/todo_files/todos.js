@@ -5,7 +5,12 @@
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
-
+	var searchList;
+	$.getJSON("gl0.json", function(json) {
+		searchList = json.map( function(x) { 
+			return x.geneName;
+			});
+	});
   // Todo Model
   // ----------
 
@@ -232,11 +237,16 @@ $(function(){
     // If you hit return in the main input field, create new **Todo** model,
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
-      console.log(e.keyCode);
-	  
+      //console.log(e.keyCode);
+	  //console.log(e.type);
+	  //console.log(e.key);
 	  //if (e.keyCode == 40) console.log('down arrow');  //This keyPress is unavailable in the scope of e in this function, maybe because it's an input box
 	  //debuggingVal = this.input.val();
-
+	  var mySearch = this.input.val() + String.fromCharCode(e.keyCode);
+	  console.log('searching: ' + mySearch);
+	  var myResults = _.filter(searchList, function(genename) { return (genename.search(mySearch) > -1); } );
+	  console.log('results: ' + myResults.toString());
+	  
 	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
 	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119) && (e.keyCode != 122) )) return;	  
 	  //if (!this.input.val()) return;

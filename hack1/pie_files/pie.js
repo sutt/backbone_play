@@ -5,7 +5,8 @@ var width = 500,
 	var color = d3.scale.category20();
 
 	var pie = d3.layout.pie()
-		.value(function(d) { return d.apples; })
+		//.value(function(d) { return d.apples; })
+		.value(function(d) { return d; })
 		.sort(null);
 
 	var arc = d3.svg.arc()
@@ -17,9 +18,10 @@ var width = 500,
 		//.attr("height", height)
 	  .append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
+	/*
 	d3.tsv("pie_files/data.tsv", type, function(error, data) {
 		var randColor = Math.round(Math.random()*10);
+		console.log(data.apples);
 		var path = svg.datum(data).selectAll("path")
 		  .data(pie)
 		.enter().append("path")
@@ -45,7 +47,7 @@ var width = 500,
 		//pie.value(function(d) { return d[value]; }); // change the value function
 		//path = path.data(pie); // compute the new angles
 		console.log(pie.value());
-		console.log(pie());
+		console.log();
 		path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
 	  }
 	  
@@ -57,7 +59,24 @@ var width = 500,
 		path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
 	  }
 	});
-
+	*/
+	//d3.json("jsonStart.json", function(error, data) {
+	d3.json("gl0.json", function(error, data) {
+		
+		console.log(error);
+		console.log(data);
+		myDebug = data;
+		my_data = data.map( function(x) {return x.geneStart;});
+		var path = svg.datum(my_data).selectAll("path")
+		  .data(pie)
+		.enter().append("path")
+		  .attr("fill", function(d, i) { return color( i )})
+		  .attr("d", arc)
+		  .each(function(d) { this._current = d; }); // store the initial angles
+		
+	});
+	
+	
 	function type(d) {
 	  d.apples = +d.apples;
 	  d.oranges = +d.oranges;
