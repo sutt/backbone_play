@@ -9,7 +9,7 @@ var width = 500,
 		.sort(null);
 
 	var arc = d3.svg.arc()
-		.innerRadius(radius - 100)
+		.innerRadius(radius - 60)
 		.outerRadius(radius - 20);
 
 	var svg = d3.select("#donut") //.append("svg")
@@ -19,23 +19,39 @@ var width = 500,
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 	d3.tsv("pie_files/data.tsv", type, function(error, data) {
-	  var path = svg.datum(data).selectAll("path")
+		var randColor = Math.round(Math.random()*10);
+		var path = svg.datum(data).selectAll("path")
 		  .data(pie)
 		.enter().append("path")
-		  .attr("fill", function(d, i) { return color(i); })
+		  .attr("fill", function(d, i) { return color( i )})
 		  .attr("d", arc)
 		  .each(function(d) { this._current = d; }); // store the initial angles
 
 	  d3.selectAll("#apples_input")
 		  .on("change", change);
 
+	  d3.select("#rotate_input")
+			.on("click", rotate_donut )
+	  
 	  var timeout = setTimeout(function() {
 		d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
-	  }, 2000);
-
+	  }, 6000);
+	  
+	  function rotate_donut() {
+		value = 'apples';
+		pie.startAngle(.333);
+		pie.endAngle(function() { return (Math.PI * 2) + .333});
+		//pie.value(function() { return pie.value()} );
+		//pie.value(function(d) { return d[value]; }); // change the value function
+		//path = path.data(pie); // compute the new angles
+		console.log(pie.value());
+		console.log(pie());
+		path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+	  }
+	  
 	  function change() {
 		var value = this.value;
-		clearTimeout(timeout);
+		clearTimeout(timeout);  
 		pie.value(function(d) { return d[value]; }); // change the value function
 		path = path.data(pie); // compute the new angles
 		path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
