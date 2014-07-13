@@ -19,8 +19,19 @@ $(function() {
 		console.log(json);
 		//console.log(myJson);
 		myJson = json;
-		var myResults = _.filter(myJson, function(s) { return (s.search('dna') > -1); } );
+		var myResults = _.filter(myJson, function(s) { return (s.search('pat') > -1); } );
 		console.log(myResults);
+		
+		}
+	);
+	
+	$.getJSON("test2json.json", function(json) {
+	
+		console.log(json);
+		//console.log(myJson);
+		//myJson = json;
+		//var myResults = _.filter(myJson, function(s) { return (s.search('pat') > -1); } );
+		//console.log(myResults);
 		
 		}
 	);
