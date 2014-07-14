@@ -1,4 +1,7 @@
 
+keydown nuances
+	http://stackoverflow.com/questions/10191621/jquery-keypress-keydown-which
+
 References ---------------------------
 
 API ref
@@ -24,3 +27,7 @@ Circular heat map (no events)
 Color Brewer
 	http://www.colorbrewer2.org/
 	http://adilapapaya.com/color/ (weird on show animation)
+
+Backbone.View.extend.toggleDone (todos.js:127)
+jQuery.event.dispatch (jquery.js:3058)
+jQuery.event.add.elemData.handle.eventHandle (jquery.js:2676)
