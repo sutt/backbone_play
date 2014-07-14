@@ -61,12 +61,12 @@ var width = 500,
 	});
 	*/
 	//d3.json("jsonStart.json", function(error, data) {
-	d3.json("gl0.json", function(error, data) {
+	d3.json("gg0_inside.json", function(error, data) {
 		
 		console.log(error);
 		console.log(data);
 		myDebug = data;
-		my_data = data.map( function(x) {return x.geneStart;});
+		my_data = data.map( function(x) {return x.geneLen;});
 		var path = svg.datum(my_data).selectAll("path")
 		  .data(pie)
 		.enter().append("path")

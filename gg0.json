@@ -1,0 +1,2882 @@
+[
+    {
+        "geneEnd": 2858, 
+        "geneLen": 389, 
+        "geneName": "ssrA", 
+        "geneStart": 3247
+    }, 
+    {
+        "geneEnd": 3418, 
+        "geneLen": 947, 
+        "geneName": "atpC", 
+        "geneStart": 4365
+    }, 
+    {
+        "geneEnd": 4454, 
+        "geneLen": 1520, 
+        "geneName": "atpA", 
+        "geneStart": 5974
+    }, 
+    {
+        "geneEnd": 6138, 
+        "geneLen": 551, 
+        "geneName": "atpD", 
+        "geneStart": 6689
+    }, 
+    {
+        "geneEnd": 6686, 
+        "geneLen": 563, 
+        "geneName": "atpF", 
+        "geneStart": 7249
+    }, 
+    {
+        "geneEnd": 7359, 
+        "geneLen": 491, 
+        "geneName": "atpG", 
+        "geneStart": 7850
+    }, 
+    {
+        "geneEnd": 7996, 
+        "geneLen": 245, 
+        "geneName": "atpH", 
+        "geneStart": 8241
+    }, 
+    {
+        "geneEnd": 8324, 
+        "geneLen": 755, 
+        "geneName": "atpI", 
+        "geneStart": 9079
+    }, 
+    {
+        "geneEnd": 19176, 
+        "geneLen": 3398, 
+        "geneName": "apcE", 
+        "geneStart": 15778
+    }, 
+    {
+        "geneEnd": 20100, 
+        "geneLen": 485, 
+        "geneName": "apcA", 
+        "geneStart": 19615
+    }, 
+    {
+        "geneEnd": 20654, 
+        "geneLen": 488, 
+        "geneName": "apcB", 
+        "geneStart": 20166
+    }, 
+    {
+        "geneEnd": 21076, 
+        "geneLen": 206, 
+        "geneName": "apcC", 
+        "geneStart": 20870
+    }, 
+    {
+        "geneEnd": 34477, 
+        "geneLen": 929, 
+        "geneName": "menA", 
+        "geneStart": 33548
+    }, 
+    {
+        "geneEnd": 35448, 
+        "geneLen": 962, 
+        "geneName": "menC", 
+        "geneStart": 34486
+    }, 
+    {
+        "geneEnd": 36884, 
+        "geneLen": 1451, 
+        "geneName": "menE", 
+        "geneStart": 35433
+    }, 
+    {
+        "geneEnd": 36976, 
+        "geneLen": 1355, 
+        "geneName": "murF", 
+        "geneStart": 38331
+    }, 
+    {
+        "geneEnd": 40927, 
+        "geneLen": 1070, 
+        "geneName": "rfbB", 
+        "geneStart": 39857
+    }, 
+    {
+        "geneEnd": 51283, 
+        "geneLen": 2036, 
+        "geneName": "mutS", 
+        "geneStart": 53319
+    }, 
+    {
+        "geneEnd": 56965, 
+        "geneLen": 323, 
+        "geneName": "trxA", 
+        "geneStart": 56642
+    }, 
+    {
+        "geneEnd": 68935, 
+        "geneLen": 401, 
+        "geneName": "rbfA", 
+        "geneStart": 68534
+    }, 
+    {
+        "geneEnd": 77551, 
+        "geneLen": 791, 
+        "geneName": "hisB", 
+        "geneStart": 76760
+    }, 
+    {
+        "geneEnd": 86231, 
+        "geneLen": 1190, 
+        "geneName": "ribD", 
+        "geneStart": 87421
+    }, 
+    {
+        "geneEnd": 89188, 
+        "geneLen": 821, 
+        "geneName": "mreC", 
+        "geneStart": 90009
+    }, 
+    {
+        "geneEnd": 90105, 
+        "geneLen": 1043, 
+        "geneName": "mreB", 
+        "geneStart": 91148
+    }, 
+    {
+        "geneEnd": 102682, 
+        "geneLen": 971, 
+        "geneName": "sds", 
+        "geneStart": 101711
+    }, 
+    {
+        "geneEnd": 110201, 
+        "geneLen": 518, 
+        "geneName": "psaL", 
+        "geneStart": 110719
+    }, 
+    {
+        "geneEnd": 110990, 
+        "geneLen": 149, 
+        "geneName": "psaJ", 
+        "geneStart": 111139
+    }, 
+    {
+        "geneEnd": 111177, 
+        "geneLen": 494, 
+        "geneName": "psaF", 
+        "geneStart": 111671
+    }, 
+    {
+        "geneEnd": 115938, 
+        "geneLen": 73, 
+        "geneName": "tRNA-Pro", 
+        "geneStart": 115865
+    }, 
+    {
+        "geneEnd": 118342, 
+        "geneLen": 914, 
+        "geneName": "hemK", 
+        "geneStart": 117428
+    }, 
+    {
+        "geneEnd": 121177, 
+        "geneLen": 977, 
+        "geneName": "secF", 
+        "geneStart": 122154
+    }, 
+    {
+        "geneEnd": 122151, 
+        "geneLen": 1424, 
+        "geneName": "secD", 
+        "geneStart": 123575
+    }, 
+    {
+        "geneEnd": 129590, 
+        "geneLen": 1016, 
+        "geneName": "cysA", 
+        "geneStart": 130606
+    }, 
+    {
+        "geneEnd": 132710, 
+        "geneLen": 1220, 
+        "geneName": "chlP", 
+        "geneStart": 131490
+    }, 
+    {
+        "geneEnd": 133034, 
+        "geneLen": 743, 
+        "geneName": "rpaA", 
+        "geneStart": 133777
+    }, 
+    {
+        "geneEnd": 141546, 
+        "geneLen": 107, 
+        "geneName": "psbT", 
+        "geneStart": 141653
+    }, 
+    {
+        "geneEnd": 141751, 
+        "geneLen": 1529, 
+        "geneName": "psbB", 
+        "geneStart": 143280
+    }, 
+    {
+        "geneEnd": 155135, 
+        "geneLen": 1124, 
+        "geneName": "chlI", 
+        "geneStart": 156259
+    }, 
+    {
+        "geneEnd": 158589, 
+        "geneLen": 1190, 
+        "geneName": "ftsW", 
+        "geneStart": 159779
+    }, 
+    {
+        "geneEnd": 165871, 
+        "geneLen": 335, 
+        "geneName": "petJ", 
+        "geneStart": 166206
+    }, 
+    {
+        "geneEnd": 179865, 
+        "geneLen": 83, 
+        "geneName": "tRNA-Leu", 
+        "geneStart": 179948
+    }, 
+    {
+        "geneEnd": 227660, 
+        "geneLen": 440, 
+        "geneName": "mutT", 
+        "geneStart": 228100
+    }, 
+    {
+        "geneEnd": 233461, 
+        "geneLen": 719, 
+        "geneName": "pdxJ", 
+        "geneStart": 234180
+    }, 
+    {
+        "geneEnd": 239307, 
+        "geneLen": 1136, 
+        "geneName": "gltA", 
+        "geneStart": 238171
+    }, 
+    {
+        "geneEnd": 240891, 
+        "geneLen": 1118, 
+        "geneName": "ndhA", 
+        "geneStart": 239773
+    }, 
+    {
+        "geneEnd": 241564, 
+        "geneLen": 584, 
+        "geneName": "ndhI", 
+        "geneStart": 240980
+    }, 
+    {
+        "geneEnd": 242273, 
+        "geneLen": 608, 
+        "geneName": "ndhG", 
+        "geneStart": 241665
+    }, 
+    {
+        "geneEnd": 242616, 
+        "geneLen": 305, 
+        "geneName": "ndhE", 
+        "geneStart": 242311
+    }, 
+    {
+        "geneEnd": 256979, 
+        "geneLen": 1025, 
+        "geneName": "plsX", 
+        "geneStart": 255954
+    }, 
+    {
+        "geneEnd": 262327, 
+        "geneLen": 73, 
+        "geneName": "tRNA-Arg", 
+        "geneStart": 262400
+    }, 
+    {
+        "geneEnd": 277397, 
+        "geneLen": 419, 
+        "geneName": "petE", 
+        "geneStart": 277816
+    }, 
+    {
+        "geneEnd": 278288, 
+        "geneLen": 491, 
+        "geneName": "psbV", 
+        "geneStart": 278779
+    }, 
+    {
+        "geneEnd": 288596, 
+        "geneLen": 554, 
+        "geneName": "trpG", 
+        "geneStart": 289150
+    }, 
+    {
+        "geneEnd": 306868, 
+        "geneLen": 2036, 
+        "geneName": "chlD", 
+        "geneStart": 308904
+    }, 
+    {
+        "geneEnd": 323835, 
+        "geneLen": 830, 
+        "geneName": "hemD", 
+        "geneStart": 324665
+    }, 
+    {
+        "geneEnd": 358179, 
+        "geneLen": 1763, 
+        "geneName": "menD", 
+        "geneStart": 356416
+    }, 
+    {
+        "geneEnd": 361531, 
+        "geneLen": 311, 
+        "geneName": "ccmK", 
+        "geneStart": 361220
+    }, 
+    {
+        "geneEnd": 364335, 
+        "geneLen": 1145, 
+        "geneName": "sbpA", 
+        "geneStart": 365480
+    }, 
+    {
+        "geneEnd": 377622, 
+        "geneLen": 419, 
+        "geneName": "psaD", 
+        "geneStart": 378041
+    }, 
+    {
+        "geneEnd": 387518, 
+        "geneLen": 1847, 
+        "geneName": "thrS", 
+        "geneStart": 385671
+    }, 
+    {
+        "geneEnd": 398114, 
+        "geneLen": 584, 
+        "geneName": "thrB", 
+        "geneStart": 397530
+    }, 
+    {
+        "geneEnd": 400573, 
+        "geneLen": 1616, 
+        "geneName": "ndhD", 
+        "geneStart": 398957
+    }, 
+    {
+        "geneEnd": 437731, 
+        "geneLen": 1160, 
+        "geneName": "bioF", 
+        "geneStart": 438891
+    }, 
+    {
+        "geneEnd": 438969, 
+        "geneLen": 641, 
+        "geneName": "ruvA", 
+        "geneStart": 439610
+    }, 
+    {
+        "geneEnd": 449309, 
+        "geneLen": 72, 
+        "geneName": "tRNA-Ala", 
+        "geneStart": 449237
+    }, 
+    {
+        "geneEnd": 478301, 
+        "geneLen": 1064, 
+        "geneName": "ccmA", 
+        "geneStart": 479365
+    }, 
+    {
+        "geneEnd": 479388, 
+        "geneLen": 1094, 
+        "geneName": "trpD", 
+        "geneStart": 480482
+    }, 
+    {
+        "geneEnd": 480495, 
+        "geneLen": 1229, 
+        "geneName": "trpB", 
+        "geneStart": 481724
+    }, 
+    {
+        "geneEnd": 481778, 
+        "geneLen": 812, 
+        "geneName": "trpA", 
+        "geneStart": 482590
+    }, 
+    {
+        "geneEnd": 483799, 
+        "geneLen": 872, 
+        "geneName": "trpC", 
+        "geneStart": 484671
+    }, 
+    {
+        "geneEnd": 484616, 
+        "geneLen": 2207, 
+        "geneName": "trpE", 
+        "geneStart": 486823
+    }, 
+    {
+        "geneEnd": 489982, 
+        "geneLen": 1184, 
+        "geneName": "aroB", 
+        "geneStart": 491166
+    }, 
+    {
+        "geneEnd": 501572, 
+        "geneLen": 1889, 
+        "geneName": "ilvB", 
+        "geneStart": 503461
+    }, 
+    {
+        "geneEnd": 524887, 
+        "geneLen": 404, 
+        "geneName": "devR", 
+        "geneStart": 524483
+    }, 
+    {
+        "geneEnd": 605200, 
+        "geneLen": 72, 
+        "geneName": "tRNA-Val", 
+        "geneStart": 605272
+    }, 
+    {
+        "geneEnd": 610399, 
+        "geneLen": 72, 
+        "geneName": "tRNA-His", 
+        "geneStart": 610471
+    }, 
+    {
+        "geneEnd": 612610, 
+        "geneLen": 1139, 
+        "geneName": "patA", 
+        "geneStart": 613749
+    }, 
+    {
+        "geneEnd": 616896, 
+        "geneLen": 518, 
+        "geneName": "pecB", 
+        "geneStart": 616378
+    }, 
+    {
+        "geneEnd": 617460, 
+        "geneLen": 488, 
+        "geneName": "pecA", 
+        "geneStart": 616972
+    }, 
+    {
+        "geneEnd": 618443, 
+        "geneLen": 836, 
+        "geneName": "pecC", 
+        "geneStart": 617607
+    }, 
+    {
+        "geneEnd": 619280, 
+        "geneLen": 761, 
+        "geneName": "pecE", 
+        "geneStart": 618519
+    }, 
+    {
+        "geneEnd": 620217, 
+        "geneLen": 521, 
+        "geneName": "pecF", 
+        "geneStart": 619696
+    }, 
+    {
+        "geneEnd": 621339, 
+        "geneLen": 521, 
+        "geneName": "cpcB", 
+        "geneStart": 620818
+    }, 
+    {
+        "geneEnd": 621920, 
+        "geneLen": 491, 
+        "geneName": "cpcA", 
+        "geneStart": 621429
+    }, 
+    {
+        "geneEnd": 622918, 
+        "geneLen": 860, 
+        "geneName": "cpcC", 
+        "geneStart": 622058
+    }, 
+    {
+        "geneEnd": 623292, 
+        "geneLen": 242, 
+        "geneName": "cpcD", 
+        "geneStart": 623050
+    }, 
+    {
+        "geneEnd": 624136, 
+        "geneLen": 830, 
+        "geneName": "cpcE", 
+        "geneStart": 623306
+    }, 
+    {
+        "geneEnd": 624841, 
+        "geneLen": 602, 
+        "geneName": "cpcF", 
+        "geneStart": 624239
+    }, 
+    {
+        "geneEnd": 664762, 
+        "geneLen": 578, 
+        "geneName": "txlA", 
+        "geneStart": 664184
+    }, 
+    {
+        "geneEnd": 668573, 
+        "geneLen": 1910, 
+        "geneName": "cphA", 
+        "geneStart": 666663
+    }, 
+    {
+        "geneEnd": 668619, 
+        "geneLen": 1130, 
+        "geneName": "aroF", 
+        "geneStart": 669749
+    }, 
+    {
+        "geneEnd": 671284, 
+        "geneLen": 2639, 
+        "geneName": "dnaB", 
+        "geneStart": 673923
+    }, 
+    {
+        "geneEnd": 700280, 
+        "geneLen": 938, 
+        "geneName": "ntcB", 
+        "geneStart": 701218
+    }, 
+    {
+        "geneEnd": 703623, 
+        "geneLen": 410, 
+        "geneName": "petC", 
+        "geneStart": 704033
+    }, 
+    {
+        "geneEnd": 706289, 
+        "geneLen": 1610, 
+        "geneName": "nirA", 
+        "geneStart": 704679
+    }, 
+    {
+        "geneEnd": 707745, 
+        "geneLen": 1322, 
+        "geneName": "nrtA", 
+        "geneStart": 706423
+    }, 
+    {
+        "geneEnd": 708641, 
+        "geneLen": 839, 
+        "geneName": "nrtB", 
+        "geneStart": 707802
+    }, 
+    {
+        "geneEnd": 710685, 
+        "geneLen": 1973, 
+        "geneName": "nrtC", 
+        "geneStart": 708712
+    }, 
+    {
+        "geneEnd": 711598, 
+        "geneLen": 833, 
+        "geneName": "nrtD", 
+        "geneStart": 710765
+    }, 
+    {
+        "geneEnd": 713947, 
+        "geneLen": 2240, 
+        "geneName": "narB", 
+        "geneStart": 711707
+    }, 
+    {
+        "geneEnd": 723731, 
+        "geneLen": 1295, 
+        "geneName": "glcE", 
+        "geneStart": 725026
+    }, 
+    {
+        "geneEnd": 752319, 
+        "geneLen": 953, 
+        "geneName": "hemF", 
+        "geneStart": 753272
+    }, 
+    {
+        "geneEnd": 787149, 
+        "geneLen": 1496, 
+        "geneName": "xisC", 
+        "geneStart": 785653
+    }, 
+    {
+        "geneEnd": 802893, 
+        "geneLen": 2357, 
+        "geneName": "hypF", 
+        "geneStart": 800536
+    }, 
+    {
+        "geneEnd": 803254, 
+        "geneLen": 248, 
+        "geneName": "hupC", 
+        "geneStart": 803006
+    }, 
+    {
+        "geneEnd": 804436, 
+        "geneLen": 1151, 
+        "geneName": "hupD", 
+        "geneStart": 803285
+    }, 
+    {
+        "geneEnd": 805993, 
+        "geneLen": 1103, 
+        "geneName": "hupE", 
+        "geneStart": 804890
+    }, 
+    {
+        "geneEnd": 806353, 
+        "geneLen": 341, 
+        "geneName": "hupA", 
+        "geneStart": 806012
+    }, 
+    {
+        "geneEnd": 807189, 
+        "geneLen": 845, 
+        "geneName": "hupB", 
+        "geneStart": 806344
+    }, 
+    {
+        "geneEnd": 829874, 
+        "geneLen": 2294, 
+        "geneName": "glgB", 
+        "geneStart": 832168
+    }, 
+    {
+        "geneEnd": 860825, 
+        "geneLen": 78, 
+        "geneName": "tRNA-Asn", 
+        "geneStart": 860747
+    }, 
+    {
+        "geneEnd": 864311, 
+        "geneLen": 1640, 
+        "geneName": "cyaD", 
+        "geneStart": 865951
+    }, 
+    {
+        "geneEnd": 875014, 
+        "geneLen": 1634, 
+        "geneName": "hoxF", 
+        "geneStart": 873380
+    }, 
+    {
+        "geneEnd": 884533, 
+        "geneLen": 716, 
+        "geneName": "hoxU", 
+        "geneStart": 883817
+    }, 
+    {
+        "geneEnd": 885880, 
+        "geneLen": 545, 
+        "geneName": "hoxY", 
+        "geneStart": 885335
+    }, 
+    {
+        "geneEnd": 888250, 
+        "geneLen": 1451, 
+        "geneName": "hoxH", 
+        "geneStart": 886799
+    }, 
+    {
+        "geneEnd": 924715, 
+        "geneLen": 335, 
+        "geneName": "psbW", 
+        "geneStart": 925050
+    }, 
+    {
+        "geneEnd": 938079, 
+        "geneLen": 2183, 
+        "geneName": "hglK", 
+        "geneStart": 940262
+    }, 
+    {
+        "geneEnd": 955535, 
+        "geneLen": 72, 
+        "geneName": "tRNA-Phe", 
+        "geneStart": 955607
+    }, 
+    {
+        "geneEnd": 971511, 
+        "geneLen": 188, 
+        "geneName": "psbH", 
+        "geneStart": 971699
+    }, 
+    {
+        "geneEnd": 971916, 
+        "geneLen": 131, 
+        "geneName": "psbN", 
+        "geneStart": 971785
+    }, 
+    {
+        "geneEnd": 979305, 
+        "geneLen": 72, 
+        "geneName": "tRNA-Glu", 
+        "geneStart": 979233
+    }, 
+    {
+        "geneEnd": 993505, 
+        "geneLen": 746, 
+        "geneName": "ccmN", 
+        "geneStart": 994251
+    }, 
+    {
+        "geneEnd": 994401, 
+        "geneLen": 1667, 
+        "geneName": "ccmM", 
+        "geneStart": 996068
+    }, 
+    {
+        "geneEnd": 996175, 
+        "geneLen": 305, 
+        "geneName": "ccmL", 
+        "geneStart": 996480
+    }, 
+    {
+        "geneEnd": 999836, 
+        "geneLen": 1856, 
+        "geneName": "ndhF", 
+        "geneStart": 997980
+    }, 
+    {
+        "geneEnd": 1019083, 
+        "geneLen": 116, 
+        "geneName": "psbM", 
+        "geneStart": 1019199
+    }, 
+    {
+        "geneEnd": 1019759, 
+        "geneLen": 137, 
+        "geneName": "psbK", 
+        "geneStart": 1019896
+    }, 
+    {
+        "geneEnd": 1079500, 
+        "geneLen": 530, 
+        "geneName": "cheW", 
+        "geneStart": 1080030
+    }, 
+    {
+        "geneEnd": 1094102, 
+        "geneLen": 1343, 
+        "geneName": "accC", 
+        "geneStart": 1092759
+    }, 
+    {
+        "geneEnd": 1094881, 
+        "geneLen": 119, 
+        "geneName": "psbX", 
+        "geneStart": 1094762
+    }, 
+    {
+        "geneEnd": 1105271, 
+        "geneLen": 1067, 
+        "geneName": "coxB", 
+        "geneStart": 1104204
+    }, 
+    {
+        "geneEnd": 1107139, 
+        "geneLen": 1727, 
+        "geneName": "coxA", 
+        "geneStart": 1105412
+    }, 
+    {
+        "geneEnd": 1107931, 
+        "geneLen": 623, 
+        "geneName": "coxC", 
+        "geneStart": 1107308
+    }, 
+    {
+        "geneEnd": 1127791, 
+        "geneLen": 881, 
+        "geneName": "fabG", 
+        "geneStart": 1128672
+    }, 
+    {
+        "geneEnd": 1147365, 
+        "geneLen": 1373, 
+        "geneName": "thiC", 
+        "geneStart": 1148738
+    }, 
+    {
+        "geneEnd": 1155915, 
+        "geneLen": 527, 
+        "geneName": "purK", 
+        "geneStart": 1155388
+    }, 
+    {
+        "geneEnd": 1195978, 
+        "geneLen": 125, 
+        "geneName": "psbY", 
+        "geneStart": 1195853
+    }, 
+    {
+        "geneEnd": 1214507, 
+        "geneLen": 1286, 
+        "geneName": "hemA", 
+        "geneStart": 1213221
+    }, 
+    {
+        "geneEnd": 1217552, 
+        "geneLen": 782, 
+        "geneName": "natA", 
+        "geneStart": 1218334
+    }, 
+    {
+        "geneEnd": 1218324, 
+        "geneLen": 1133, 
+        "geneName": "natC", 
+        "geneStart": 1219457
+    }, 
+    {
+        "geneEnd": 1257494, 
+        "geneLen": 2882, 
+        "geneName": "ileS", 
+        "geneStart": 1254612
+    }, 
+    {
+        "geneEnd": 1265148, 
+        "geneLen": 1283, 
+        "geneName": "argD", 
+        "geneStart": 1263865
+    }, 
+    {
+        "geneEnd": 1278925, 
+        "geneLen": 1460, 
+        "geneName": "cysS", 
+        "geneStart": 1280385
+    }, 
+    {
+        "geneEnd": 1309271, 
+        "geneLen": 2207, 
+        "geneName": "cyaA", 
+        "geneStart": 1311478
+    }, 
+    {
+        "geneEnd": 1331525, 
+        "geneLen": 1997, 
+        "geneName": "uvrB", 
+        "geneStart": 1333522
+    }, 
+    {
+        "geneEnd": 1357843, 
+        "geneLen": 881, 
+        "geneName": "dmnB", 
+        "geneStart": 1356962
+    }, 
+    {
+        "geneEnd": 1368658, 
+        "geneLen": 93, 
+        "geneName": "ffs", 
+        "geneStart": 1368751
+    }, 
+    {
+        "geneEnd": 1433741, 
+        "geneLen": 449, 
+        "geneName": "psbU", 
+        "geneStart": 1433292
+    }, 
+    {
+        "geneEnd": 1440687, 
+        "geneLen": 848, 
+        "geneName": "btpA", 
+        "geneStart": 1441535
+    }, 
+    {
+        "geneEnd": 1470854, 
+        "geneLen": 614, 
+        "geneName": "clpP", 
+        "geneStart": 1470240
+    }, 
+    {
+        "geneEnd": 1475355, 
+        "geneLen": 2351, 
+        "geneName": "zam", 
+        "geneStart": 1473004
+    }, 
+    {
+        "geneEnd": 1480378, 
+        "geneLen": 893, 
+        "geneName": "argB", 
+        "geneStart": 1479485
+    }, 
+    {
+        "geneEnd": 1493178, 
+        "geneLen": 401, 
+        "geneName": "psbZ", 
+        "geneStart": 1493579
+    }, 
+    {
+        "geneEnd": 1497467, 
+        "geneLen": 1841, 
+        "geneName": "ftsH", 
+        "geneStart": 1495626
+    }, 
+    {
+        "geneEnd": 1500972, 
+        "geneLen": 1598, 
+        "geneName": "dnaK", 
+        "geneStart": 1499374
+    }, 
+    {
+        "geneEnd": 1507526, 
+        "geneLen": 1007, 
+        "geneName": "trpS", 
+        "geneStart": 1508533
+    }, 
+    {
+        "geneEnd": 1516595, 
+        "geneLen": 116, 
+        "geneName": "psbI", 
+        "geneStart": 1516479
+    }, 
+    {
+        "geneEnd": 1526744, 
+        "geneLen": 134, 
+        "geneName": "psaX", 
+        "geneStart": 1526610
+    }, 
+    {
+        "geneEnd": 1533964, 
+        "geneLen": 440, 
+        "geneName": "cynS", 
+        "geneStart": 1534404
+    }, 
+    {
+        "geneEnd": 1558695, 
+        "geneLen": 1088, 
+        "geneName": "leuB", 
+        "geneStart": 1557607
+    }, 
+    {
+        "geneEnd": 1562679, 
+        "geneLen": 3044, 
+        "geneName": "valS", 
+        "geneStart": 1565723
+    }, 
+    {
+        "geneEnd": 1603351, 
+        "geneLen": 1952, 
+        "geneName": "sir", 
+        "geneStart": 1601399
+    }, 
+    {
+        "geneEnd": 1620751, 
+        "geneLen": 374, 
+        "geneName": "cytM", 
+        "geneStart": 1621125
+    }, 
+    {
+        "geneEnd": 1621447, 
+        "geneLen": 113, 
+        "geneName": "petG", 
+        "geneStart": 1621334
+    }, 
+    {
+        "geneEnd": 1638016, 
+        "geneLen": 1988, 
+        "geneName": "prcA", 
+        "geneStart": 1636028
+    }, 
+    {
+        "geneEnd": 1673285, 
+        "geneLen": 287, 
+        "geneName": "nifZ", 
+        "geneStart": 1672998
+    }, 
+    {
+        "geneEnd": 1673463, 
+        "geneLen": 203, 
+        "geneName": "nifT", 
+        "geneStart": 1673260
+    }, 
+    {
+        "geneEnd": 1679612, 
+        "geneLen": 608, 
+        "geneName": "leuD", 
+        "geneStart": 1680220
+    }, 
+    {
+        "geneEnd": 1680557, 
+        "geneLen": 1403, 
+        "geneName": "leuC", 
+        "geneStart": 1681960
+    }, 
+    {
+        "geneEnd": 1691166, 
+        "geneLen": 209, 
+        "geneName": "mop", 
+        "geneStart": 1690957
+    }, 
+    {
+        "geneEnd": 1691689, 
+        "geneLen": 299, 
+        "geneName": "fdxH", 
+        "geneStart": 1691988
+    }, 
+    {
+        "geneEnd": 1692173, 
+        "geneLen": 371, 
+        "geneName": "hesB", 
+        "geneStart": 1692544
+    }, 
+    {
+        "geneEnd": 1692616, 
+        "geneLen": 758, 
+        "geneName": "hesA", 
+        "geneStart": 1693374
+    }, 
+    {
+        "geneEnd": 1693430, 
+        "geneLen": 317, 
+        "geneName": "nifW", 
+        "geneStart": 1693747
+    }, 
+    {
+        "geneEnd": 1694529, 
+        "geneLen": 413, 
+        "geneName": "nifX", 
+        "geneStart": 1694942
+    }, 
+    {
+        "geneEnd": 1695055, 
+        "geneLen": 1334, 
+        "geneName": "nifN", 
+        "geneStart": 1696389
+    }, 
+    {
+        "geneEnd": 1696389, 
+        "geneLen": 1442, 
+        "geneName": "nifE", 
+        "geneStart": 1697831
+    }, 
+    {
+        "geneEnd": 1698743, 
+        "geneLen": 1538, 
+        "geneName": "nifK", 
+        "geneStart": 1700281
+    }, 
+    {
+        "geneEnd": 1702159, 
+        "geneLen": 1418, 
+        "geneName": "xisA", 
+        "geneStart": 1700741
+    }, 
+    {
+        "geneEnd": 1711420, 
+        "geneLen": 230, 
+        "geneName": "adx", 
+        "geneStart": 1711190
+    }, 
+    {
+        "geneEnd": 1713396, 
+        "geneLen": 887, 
+        "geneName": "nifH", 
+        "geneStart": 1714283
+    }, 
+    {
+        "geneEnd": 1714501, 
+        "geneLen": 902, 
+        "geneName": "nifU", 
+        "geneStart": 1715403
+    }, 
+    {
+        "geneEnd": 1715535, 
+        "geneLen": 1202, 
+        "geneName": "nifS", 
+        "geneStart": 1716737
+    }, 
+    {
+        "geneEnd": 1718391, 
+        "geneLen": 1544, 
+        "geneName": "xisF", 
+        "geneStart": 1716847
+    }, 
+    {
+        "geneEnd": 1719776, 
+        "geneLen": 413, 
+        "geneName": "xisH", 
+        "geneStart": 1719363
+    }, 
+    {
+        "geneEnd": 1720099, 
+        "geneLen": 335, 
+        "geneName": "xisI", 
+        "geneStart": 1719764
+    }, 
+    {
+        "geneEnd": 1750370, 
+        "geneLen": 947, 
+        "geneName": "dnaJ", 
+        "geneStart": 1751317
+    }, 
+    {
+        "geneEnd": 1759491, 
+        "geneLen": 389, 
+        "geneName": "vapC", 
+        "geneStart": 1759880
+    }, 
+    {
+        "geneEnd": 1776670, 
+        "geneLen": 1427, 
+        "geneName": "nifB", 
+        "geneStart": 1778097
+    }, 
+    {
+        "geneEnd": 1787400, 
+        "geneLen": 1430, 
+        "geneName": "rbcL", 
+        "geneStart": 1785970
+    }, 
+    {
+        "geneEnd": 1788279, 
+        "geneLen": 329, 
+        "geneName": "rbcS", 
+        "geneStart": 1787950
+    }, 
+    {
+        "geneEnd": 1795689, 
+        "geneLen": 1244, 
+        "geneName": "rca", 
+        "geneStart": 1794445
+    }, 
+    {
+        "geneEnd": 1804439, 
+        "geneLen": 881, 
+        "geneName": "truB", 
+        "geneStart": 1803558
+    }, 
+    {
+        "geneEnd": 1819552, 
+        "geneLen": 82, 
+        "geneName": "tRNA-Tyr", 
+        "geneStart": 1819470
+    }, 
+    {
+        "geneEnd": 1819684, 
+        "geneLen": 71, 
+        "geneName": "tRNA-Thr", 
+        "geneStart": 1819613
+    }, 
+    {
+        "geneEnd": 1819777, 
+        "geneLen": 71, 
+        "geneName": "tRNA-Gly", 
+        "geneStart": 1819848
+    }, 
+    {
+        "geneEnd": 1863132, 
+        "geneLen": 1301, 
+        "geneName": "hisD", 
+        "geneStart": 1864433
+    }, 
+    {
+        "geneEnd": 1870453, 
+        "geneLen": 3395, 
+        "geneName": "rpoB", 
+        "geneStart": 1867058
+    }, 
+    {
+        "geneEnd": 1878346, 
+        "geneLen": 1052, 
+        "geneName": "desA", 
+        "geneStart": 1879398
+    }, 
+    {
+        "geneEnd": 1879629, 
+        "geneLen": 818, 
+        "geneName": "desC", 
+        "geneStart": 1880447
+    }, 
+    {
+        "geneEnd": 1884097, 
+        "geneLen": 722, 
+        "geneName": "devB", 
+        "geneStart": 1883375
+    }, 
+    {
+        "geneEnd": 1891880, 
+        "geneLen": 71, 
+        "geneName": "tRNA-Gln", 
+        "geneStart": 1891951
+    }, 
+    {
+        "geneEnd": 1937534, 
+        "geneLen": 497, 
+        "geneName": "moaE", 
+        "geneStart": 1938031
+    }, 
+    {
+        "geneEnd": 1951710, 
+        "geneLen": 3791, 
+        "geneName": "hglE", 
+        "geneStart": 1955501
+    }, 
+    {
+        "geneEnd": 2018648, 
+        "geneLen": 3908, 
+        "geneName": "CobN", 
+        "geneStart": 2014740
+    }, 
+    {
+        "geneEnd": 2020071, 
+        "geneLen": 455, 
+        "geneName": "fur", 
+        "geneStart": 2020526
+    }, 
+    {
+        "geneEnd": 2021083, 
+        "geneLen": 1250, 
+        "geneName": "sigC", 
+        "geneStart": 2022333
+    }, 
+    {
+        "geneEnd": 2046389, 
+        "geneLen": 752, 
+        "geneName": "rffM", 
+        "geneStart": 2045637
+    }, 
+    {
+        "geneEnd": 2047346, 
+        "geneLen": 656, 
+        "geneName": "ftsE", 
+        "geneStart": 2046690
+    }, 
+    {
+        "geneEnd": 2097006, 
+        "geneLen": 989, 
+        "geneName": "por", 
+        "geneStart": 2097995
+    }, 
+    {
+        "geneEnd": 2113659, 
+        "geneLen": 1640, 
+        "geneName": "ftsY", 
+        "geneStart": 2115299
+    }, 
+    {
+        "geneEnd": 2115604, 
+        "geneLen": 635, 
+        "geneName": "nusB", 
+        "geneStart": 2116239
+    }, 
+    {
+        "geneEnd": 2132044, 
+        "geneLen": 266, 
+        "geneName": "xseB", 
+        "geneStart": 2132310
+    }, 
+    {
+        "geneEnd": 2132307, 
+        "geneLen": 1238, 
+        "geneName": "xseA", 
+        "geneStart": 2133545
+    }, 
+    {
+        "geneEnd": 2160261, 
+        "geneLen": 1193, 
+        "geneName": "queA", 
+        "geneStart": 2159068
+    }, 
+    {
+        "geneEnd": 2193754, 
+        "geneLen": 1421, 
+        "geneName": "icd", 
+        "geneStart": 2192333
+    }, 
+    {
+        "geneEnd": 2197958, 
+        "geneLen": 1439, 
+        "geneName": "pds", 
+        "geneStart": 2196519
+    }, 
+    {
+        "geneEnd": 2198874, 
+        "geneLen": 932, 
+        "geneName": "pys", 
+        "geneStart": 2197942
+    }, 
+    {
+        "geneEnd": 2199274, 
+        "geneLen": 91, 
+        "geneName": "tRNA-Ser", 
+        "geneStart": 2199183
+    }, 
+    {
+        "geneEnd": 2267249, 
+        "geneLen": 1682, 
+        "geneName": "groEL", 
+        "geneStart": 2265567
+    }, 
+    {
+        "geneEnd": 2291566, 
+        "geneLen": 3563, 
+        "geneName": "nifJ", 
+        "geneStart": 2288003
+    }, 
+    {
+        "geneEnd": 2346852, 
+        "geneLen": 2444, 
+        "geneName": "clpB", 
+        "geneStart": 2344408
+    }, 
+    {
+        "geneEnd": 2371483, 
+        "geneLen": 2396, 
+        "geneName": "comE", 
+        "geneStart": 2373879
+    }, 
+    {
+        "geneEnd": 2374532, 
+        "geneLen": 884, 
+        "geneName": "glyQ", 
+        "geneStart": 2375416
+    }, 
+    {
+        "geneEnd": 2377414, 
+        "geneLen": 73, 
+        "geneName": "tRNA-Ile", 
+        "geneStart": 2377341
+    }, 
+    {
+        "geneEnd": 2383665, 
+        "geneLen": 2339, 
+        "geneName": "recJ", 
+        "geneStart": 2386004
+    }, 
+    {
+        "geneEnd": 2404397, 
+        "geneLen": 1379, 
+        "geneName": "dnaA", 
+        "geneStart": 2403018
+    }, 
+    {
+        "geneEnd": 2405975, 
+        "geneLen": 1163, 
+        "geneName": "dnaN", 
+        "geneStart": 2404812
+    }, 
+    {
+        "geneEnd": 2432154, 
+        "geneLen": 788, 
+        "geneName": "minD", 
+        "geneStart": 2432942
+    }, 
+    {
+        "geneEnd": 2466097, 
+        "geneLen": 869, 
+        "geneName": "aroK", 
+        "geneStart": 2465228
+    }, 
+    {
+        "geneEnd": 2478215, 
+        "geneLen": 1091, 
+        "geneName": "thrC", 
+        "geneStart": 2479306
+    }, 
+    {
+        "geneEnd": 2490212, 
+        "geneLen": 962, 
+        "geneName": "cobD", 
+        "geneStart": 2489250
+    }, 
+    {
+        "geneEnd": 2506772, 
+        "geneLen": 1061, 
+        "geneName": "hisC", 
+        "geneStart": 2505711
+    }, 
+    {
+        "geneEnd": 2520111, 
+        "geneLen": 1325, 
+        "geneName": "ama", 
+        "geneStart": 2521436
+    }, 
+    {
+        "geneEnd": 2524079, 
+        "geneLen": 623, 
+        "geneName": "acpD", 
+        "geneStart": 2524702
+    }, 
+    {
+        "geneEnd": 2659385, 
+        "geneLen": 1136, 
+        "geneName": "phnM", 
+        "geneStart": 2660521
+    }, 
+    {
+        "geneEnd": 2660694, 
+        "geneLen": 725, 
+        "geneName": "phnL", 
+        "geneStart": 2661419
+    }, 
+    {
+        "geneEnd": 2661543, 
+        "geneLen": 773, 
+        "geneName": "phnK", 
+        "geneStart": 2662316
+    }, 
+    {
+        "geneEnd": 2662530, 
+        "geneLen": 866, 
+        "geneName": "phnJ", 
+        "geneStart": 2663396
+    }, 
+    {
+        "geneEnd": 2665886, 
+        "geneLen": 1247, 
+        "geneName": "phnI", 
+        "geneStart": 2667133
+    }, 
+    {
+        "geneEnd": 2667620, 
+        "geneLen": 599, 
+        "geneName": "phnH", 
+        "geneStart": 2668219
+    }, 
+    {
+        "geneEnd": 2668286, 
+        "geneLen": 455, 
+        "geneName": "phnG", 
+        "geneStart": 2668741
+    }, 
+    {
+        "geneEnd": 2670248, 
+        "geneLen": 824, 
+        "geneName": "phnE", 
+        "geneStart": 2671072
+    }, 
+    {
+        "geneEnd": 2671097, 
+        "geneLen": 1001, 
+        "geneName": "phnD", 
+        "geneStart": 2672098
+    }, 
+    {
+        "geneEnd": 2673286, 
+        "geneLen": 797, 
+        "geneName": "phnC", 
+        "geneStart": 2674083
+    }, 
+    {
+        "geneEnd": 2680210, 
+        "geneLen": 1592, 
+        "geneName": "phoD", 
+        "geneStart": 2678618
+    }, 
+    {
+        "geneEnd": 2680443, 
+        "geneLen": 959, 
+        "geneName": "fecC", 
+        "geneStart": 2681402
+    }, 
+    {
+        "geneEnd": 2701618, 
+        "geneLen": 377, 
+        "geneName": "gvpG", 
+        "geneStart": 2701995
+    }, 
+    {
+        "geneEnd": 2702009, 
+        "geneLen": 734, 
+        "geneName": "gvpF", 
+        "geneStart": 2702743
+    }, 
+    {
+        "geneEnd": 2702841, 
+        "geneLen": 467, 
+        "geneName": "gvpK", 
+        "geneStart": 2703308
+    }, 
+    {
+        "geneEnd": 2703434, 
+        "geneLen": 446, 
+        "geneName": "gvpJ", 
+        "geneStart": 2703880
+    }, 
+    {
+        "geneEnd": 2703877, 
+        "geneLen": 1232, 
+        "geneName": "gvpN", 
+        "geneStart": 2705109
+    }, 
+    {
+        "geneEnd": 2705536, 
+        "geneLen": 389, 
+        "geneName": "gvpC", 
+        "geneStart": 2705925
+    }, 
+    {
+        "geneEnd": 2706132, 
+        "geneLen": 215, 
+        "geneName": "gvpB", 
+        "geneStart": 2706347
+    }, 
+    {
+        "geneEnd": 2706452, 
+        "geneLen": 215, 
+        "geneName": "gvpA", 
+        "geneStart": 2706667
+    }, 
+    {
+        "geneEnd": 2717406, 
+        "geneLen": 5333, 
+        "geneName": "hstK", 
+        "geneStart": 2712073
+    }, 
+    {
+        "geneEnd": 2719117, 
+        "geneLen": 1385, 
+        "geneName": "pknB", 
+        "geneStart": 2717732
+    }, 
+    {
+        "geneEnd": 2726279, 
+        "geneLen": 1136, 
+        "geneName": "sqdX", 
+        "geneStart": 2725143
+    }, 
+    {
+        "geneEnd": 2731157, 
+        "geneLen": 737, 
+        "geneName": "purC", 
+        "geneStart": 2730420
+    }, 
+    {
+        "geneEnd": 2737735, 
+        "geneLen": 1154, 
+        "geneName": "lpxB", 
+        "geneStart": 2736581
+    }, 
+    {
+        "geneEnd": 2754279, 
+        "geneLen": 497, 
+        "geneName": "rsbW", 
+        "geneStart": 2754776
+    }, 
+    {
+        "geneEnd": 2767670, 
+        "geneLen": 491, 
+        "geneName": "ruvC", 
+        "geneStart": 2768161
+    }, 
+    {
+        "geneEnd": 2771000, 
+        "geneLen": 53, 
+        "geneName": "patS", 
+        "geneStart": 2771053
+    }, 
+    {
+        "geneEnd": 2785648, 
+        "geneLen": 317, 
+        "geneName": "rbpF", 
+        "geneStart": 2785331
+    }, 
+    {
+        "geneEnd": 2793490, 
+        "geneLen": 338, 
+        "geneName": "glnB", 
+        "geneStart": 2793828
+    }, 
+    {
+        "geneEnd": 2806614, 
+        "geneLen": 509, 
+        "geneName": "apcF", 
+        "geneStart": 2807123
+    }, 
+    {
+        "geneEnd": 2808907, 
+        "geneLen": 1424, 
+        "geneName": "glnA", 
+        "geneStart": 2807483
+    }, 
+    {
+        "geneEnd": 2822537, 
+        "geneLen": 899, 
+        "geneName": "hetR", 
+        "geneStart": 2821638
+    }, 
+    {
+        "geneEnd": 2834780, 
+        "geneLen": 731, 
+        "geneName": "radC", 
+        "geneStart": 2834049
+    }, 
+    {
+        "geneEnd": 2845634, 
+        "geneLen": 233, 
+        "geneName": "nlpD", 
+        "geneStart": 2845867
+    }, 
+    {
+        "geneEnd": 2848747, 
+        "geneLen": 950, 
+        "geneName": "accD", 
+        "geneStart": 2849697
+    }, 
+    {
+        "geneEnd": 2865888, 
+        "geneLen": 1439, 
+        "geneName": "crtQ", 
+        "geneStart": 2867327
+    }, 
+    {
+        "geneEnd": 2876534, 
+        "geneLen": 539, 
+        "geneName": "fraC", 
+        "geneStart": 2875995
+    }, 
+    {
+        "geneEnd": 2936180, 
+        "geneLen": 1118, 
+        "geneName": "pilT", 
+        "geneStart": 2937298
+    }, 
+    {
+        "geneEnd": 2940490, 
+        "geneLen": 746, 
+        "geneName": "grpE", 
+        "geneStart": 2939744
+    }, 
+    {
+        "geneEnd": 2948253, 
+        "geneLen": 1001, 
+        "geneName": "petA", 
+        "geneStart": 2949254
+    }, 
+    {
+        "geneEnd": 2950716, 
+        "geneLen": 212, 
+        "geneName": "csaA", 
+        "geneStart": 2950928
+    }, 
+    {
+        "geneEnd": 2966421, 
+        "geneLen": 221, 
+        "geneName": "ftrV", 
+        "geneStart": 2966642
+    }, 
+    {
+        "geneEnd": 2998395, 
+        "geneLen": 968, 
+        "geneName": "argC", 
+        "geneStart": 2999363
+    }, 
+    {
+        "geneEnd": 3010134, 
+        "geneLen": 1811, 
+        "geneName": "lepA", 
+        "geneStart": 3011945
+    }, 
+    {
+        "geneEnd": 3017835, 
+        "geneLen": 1589, 
+        "geneName": "patB", 
+        "geneStart": 3019424
+    }, 
+    {
+        "geneEnd": 3020616, 
+        "geneLen": 293, 
+        "geneName": "fdxB", 
+        "geneStart": 3020323
+    }, 
+    {
+        "geneEnd": 3060033, 
+        "geneLen": 1217, 
+        "geneName": "ackA", 
+        "geneStart": 3061250
+    }, 
+    {
+        "geneEnd": 3062538, 
+        "geneLen": 998, 
+        "geneName": "tal", 
+        "geneStart": 3063536
+    }, 
+    {
+        "geneEnd": 3305862, 
+        "geneLen": 71, 
+        "geneName": "tRNA-Lys", 
+        "geneStart": 3305791
+    }, 
+    {
+        "geneEnd": 3325873, 
+        "geneLen": 1883, 
+        "geneName": "uvrC", 
+        "geneStart": 3323990
+    }, 
+    {
+        "geneEnd": 3340713, 
+        "geneLen": 188, 
+        "geneName": "ssaA", 
+        "geneStart": 3340901
+    }, 
+    {
+        "geneEnd": 3374343, 
+        "geneLen": 299, 
+        "geneName": "rbpE", 
+        "geneStart": 3374642
+    }, 
+    {
+        "geneEnd": 3417568, 
+        "geneLen": 848, 
+        "geneName": "aroE", 
+        "geneStart": 3418416
+    }, 
+    {
+        "geneEnd": 3431198, 
+        "geneLen": 3134, 
+        "geneName": "hetC", 
+        "geneStart": 3428064
+    }, 
+    {
+        "geneEnd": 3432843, 
+        "geneLen": 479, 
+        "geneName": "hetP", 
+        "geneStart": 3432364
+    }, 
+    {
+        "geneEnd": 3446915, 
+        "geneLen": 569, 
+        "geneName": "rfbC", 
+        "geneStart": 3446346
+    }, 
+    {
+        "geneEnd": 3456061, 
+        "geneLen": 1823, 
+        "geneName": "hepA", 
+        "geneStart": 3454238
+    }, 
+    {
+        "geneEnd": 3510456, 
+        "geneLen": 1376, 
+        "geneName": "cmpA", 
+        "geneStart": 3509080
+    }, 
+    {
+        "geneEnd": 3511386, 
+        "geneLen": 839, 
+        "geneName": "cmpB", 
+        "geneStart": 3510547
+    }, 
+    {
+        "geneEnd": 3513463, 
+        "geneLen": 2003, 
+        "geneName": "cmcC", 
+        "geneStart": 3511460
+    }, 
+    {
+        "geneEnd": 3514455, 
+        "geneLen": 869, 
+        "geneName": "cmpD", 
+        "geneStart": 3513586
+    }, 
+    {
+        "geneEnd": 3516748, 
+        "geneLen": 632, 
+        "geneName": "exoD", 
+        "geneStart": 3516116
+    }, 
+    {
+        "geneEnd": 3522926, 
+        "geneLen": 308, 
+        "geneName": "kaiA", 
+        "geneStart": 3522618
+    }, 
+    {
+        "geneEnd": 3523358, 
+        "geneLen": 326, 
+        "geneName": "kaiB", 
+        "geneStart": 3523032
+    }, 
+    {
+        "geneEnd": 3524992, 
+        "geneLen": 1559, 
+        "geneName": "kaiC", 
+        "geneStart": 3523433
+    }, 
+    {
+        "geneEnd": 3532795, 
+        "geneLen": 1100, 
+        "geneName": "ruvB", 
+        "geneStart": 3533895
+    }, 
+    {
+        "geneEnd": 3534829, 
+        "geneLen": 779, 
+        "geneName": "hisF", 
+        "geneStart": 3534050
+    }, 
+    {
+        "geneEnd": 3537722, 
+        "geneLen": 2255, 
+        "geneName": "aphB", 
+        "geneStart": 3539977
+    }, 
+    {
+        "geneEnd": 3546463, 
+        "geneLen": 1172, 
+        "geneName": "moeB", 
+        "geneStart": 3547635
+    }, 
+    {
+        "geneEnd": 3555925, 
+        "geneLen": 1214, 
+        "geneName": "hisS", 
+        "geneStart": 3557139
+    }, 
+    {
+        "geneEnd": 3565811, 
+        "geneLen": 311, 
+        "geneName": "rbpB", 
+        "geneStart": 3566122
+    }, 
+    {
+        "geneEnd": 3566296, 
+        "geneLen": 794, 
+        "geneName": "ecaA", 
+        "geneStart": 3567090
+    }, 
+    {
+        "geneEnd": 3575180, 
+        "geneLen": 1604, 
+        "geneName": "panC", 
+        "geneStart": 3573576
+    }, 
+    {
+        "geneEnd": 3576605, 
+        "geneLen": 602, 
+        "geneName": "sodB", 
+        "geneStart": 3576003
+    }, 
+    {
+        "geneEnd": 3624981, 
+        "geneLen": 1196, 
+        "geneName": "tyrS", 
+        "geneStart": 3623785
+    }, 
+    {
+        "geneEnd": 3655956, 
+        "geneLen": 1148, 
+        "geneName": "degT", 
+        "geneStart": 3654808
+    }, 
+    {
+        "geneEnd": 3701226, 
+        "geneLen": 1691, 
+        "geneName": "mutL", 
+        "geneStart": 3699535
+    }, 
+    {
+        "geneEnd": 3745060, 
+        "geneLen": 1520, 
+        "geneName": "purH", 
+        "geneStart": 3746580
+    }, 
+    {
+        "geneEnd": 3781956, 
+        "geneLen": 740, 
+        "geneName": "ccdA", 
+        "geneStart": 3781216
+    }, 
+    {
+        "geneEnd": 3792889, 
+        "geneLen": 914, 
+        "geneName": "exoV", 
+        "geneStart": 3793803
+    }, 
+    {
+        "geneEnd": 3823904, 
+        "geneLen": 2297, 
+        "geneName": "aphA", 
+        "geneStart": 3821607
+    }, 
+    {
+        "geneEnd": 3853345, 
+        "geneLen": 641, 
+        "geneName": "lrtA", 
+        "geneStart": 3853986
+    }, 
+    {
+        "geneEnd": 3870802, 
+        "geneLen": 1442, 
+        "geneName": "gltX", 
+        "geneStart": 3872244
+    }, 
+    {
+        "geneEnd": 3872407, 
+        "geneLen": 73, 
+        "geneName": "tRNA-Asp", 
+        "geneStart": 3872480
+    }, 
+    {
+        "geneEnd": 3880315, 
+        "geneLen": 440, 
+        "geneName": "mazF", 
+        "geneStart": 3880755
+    }, 
+    {
+        "geneEnd": 3880755, 
+        "geneLen": 242, 
+        "geneName": "mazE", 
+        "geneStart": 3880997
+    }, 
+    {
+        "geneEnd": 3944478, 
+        "geneLen": 1073, 
+        "geneName": "recA", 
+        "geneStart": 3945551
+    }, 
+    {
+        "geneEnd": 3959482, 
+        "geneLen": 2618, 
+        "geneName": "leuS", 
+        "geneStart": 3956864
+    }, 
+    {
+        "geneEnd": 4061454, 
+        "geneLen": 1184, 
+        "geneName": "ndhH", 
+        "geneStart": 4060270
+    }, 
+    {
+        "geneEnd": 4082801, 
+        "geneLen": 1130, 
+        "geneName": "recF", 
+        "geneStart": 4083931
+    }, 
+    {
+        "geneEnd": 4099892, 
+        "geneLen": 1040, 
+        "geneName": "cobW", 
+        "geneStart": 4100932
+    }, 
+    {
+        "geneEnd": 4104126, 
+        "geneLen": 320, 
+        "geneName": "srpB", 
+        "geneStart": 4104446
+    }, 
+    {
+        "geneEnd": 4131034, 
+        "geneLen": 647, 
+        "geneName": "petB", 
+        "geneStart": 4130387
+    }, 
+    {
+        "geneEnd": 4131687, 
+        "geneLen": 482, 
+        "geneName": "petD", 
+        "geneStart": 4131205
+    }, 
+    {
+        "geneEnd": 4136964, 
+        "geneLen": 815, 
+        "geneName": "glnH", 
+        "geneStart": 4136149
+    }, 
+    {
+        "geneEnd": 4148690, 
+        "geneLen": 1526, 
+        "geneName": "chlB", 
+        "geneStart": 4147164
+    }, 
+    {
+        "geneEnd": 4167034, 
+        "geneLen": 1100, 
+        "geneName": "minC", 
+        "geneStart": 4165934
+    }, 
+    {
+        "geneEnd": 4168212, 
+        "geneLen": 293, 
+        "geneName": "minE", 
+        "geneStart": 4167919
+    }, 
+    {
+        "geneEnd": 4174178, 
+        "geneLen": 245, 
+        "geneName": "psaC", 
+        "geneStart": 4173933
+    }, 
+    {
+        "geneEnd": 4176374, 
+        "geneLen": 1625, 
+        "geneName": "nodM", 
+        "geneStart": 4174749
+    }, 
+    {
+        "geneEnd": 4240062, 
+        "geneLen": 1958, 
+        "geneName": "thiG", 
+        "geneStart": 4242020
+    }, 
+    {
+        "geneEnd": 4244798, 
+        "geneLen": 1634, 
+        "geneName": "leuA", 
+        "geneStart": 4243164
+    }, 
+    {
+        "geneEnd": 4262834, 
+        "geneLen": 1058, 
+        "geneName": "hisH", 
+        "geneStart": 4261776
+    }, 
+    {
+        "geneEnd": 4275908, 
+        "geneLen": 2339, 
+        "geneName": "hetF", 
+        "geneStart": 4273569
+    }, 
+    {
+        "geneEnd": 4278054, 
+        "geneLen": 479, 
+        "geneName": "c", 
+        "geneStart": 4278533
+    }, 
+    {
+        "geneEnd": 4312098, 
+        "geneLen": 509, 
+        "geneName": "ppa", 
+        "geneStart": 4312607
+    }, 
+    {
+        "geneEnd": 4315437, 
+        "geneLen": 1082, 
+        "geneName": "psbAIV", 
+        "geneStart": 4316519
+    }, 
+    {
+        "geneEnd": 4381849, 
+        "geneLen": 947, 
+        "geneName": "avaIR", 
+        "geneStart": 4382796
+    }, 
+    {
+        "geneEnd": 4382796, 
+        "geneLen": 1448, 
+        "geneName": "avaIM", 
+        "geneStart": 4384244
+    }, 
+    {
+        "geneEnd": 4409048, 
+        "geneLen": 485, 
+        "geneName": "apcD", 
+        "geneStart": 4409533
+    }, 
+    {
+        "geneEnd": 4419073, 
+        "geneLen": 311, 
+        "geneName": "groES", 
+        "geneStart": 4418762
+    }, 
+    {
+        "geneEnd": 4445320, 
+        "geneLen": 1337, 
+        "geneName": "clpC", 
+        "geneStart": 4443983
+    }, 
+    {
+        "geneEnd": 4466997, 
+        "geneLen": 1169, 
+        "geneName": "hepB", 
+        "geneStart": 4465828
+    }, 
+    {
+        "geneEnd": 4481492, 
+        "geneLen": 1157, 
+        "geneName": "devC", 
+        "geneStart": 4480335
+    }, 
+    {
+        "geneEnd": 4482410, 
+        "geneLen": 734, 
+        "geneName": "devA", 
+        "geneStart": 4481676
+    }, 
+    {
+        "geneEnd": 4487798, 
+        "geneLen": 2885, 
+        "geneName": "uvrA", 
+        "geneStart": 4484913
+    }, 
+    {
+        "geneEnd": 4488053, 
+        "geneLen": 1766, 
+        "geneName": "argS", 
+        "geneStart": 4489819
+    }, 
+    {
+        "geneEnd": 4501080, 
+        "geneLen": 1082, 
+        "geneName": "psbAII", 
+        "geneStart": 4499998
+    }, 
+    {
+        "geneEnd": 4506432, 
+        "geneLen": 2576, 
+        "geneName": "prpA", 
+        "geneStart": 4503856
+    }, 
+    {
+        "geneEnd": 4508437, 
+        "geneLen": 1703, 
+        "geneName": "pknE", 
+        "geneStart": 4506734
+    }, 
+    {
+        "geneEnd": 4519511, 
+        "geneLen": 1082, 
+        "geneName": "psbA", 
+        "geneStart": 4518429
+    }, 
+    {
+        "geneEnd": 4556213, 
+        "geneLen": 722, 
+        "geneName": "orrA", 
+        "geneStart": 4555491
+    }, 
+    {
+        "geneEnd": 4593086, 
+        "geneLen": 983, 
+        "geneName": "sigE", 
+        "geneStart": 4592103
+    }, 
+    {
+        "geneEnd": 4608436, 
+        "geneLen": 998, 
+        "geneName": "sigD", 
+        "geneStart": 4607438
+    }, 
+    {
+        "geneEnd": 4611242, 
+        "geneLen": 662, 
+        "geneName": "nblB", 
+        "geneStart": 4610580
+    }, 
+    {
+        "geneEnd": 4623077, 
+        "geneLen": 1523, 
+        "geneName": "radA", 
+        "geneStart": 4621554
+    }, 
+    {
+        "geneEnd": 4633481, 
+        "geneLen": 3119, 
+        "geneName": "infB", 
+        "geneStart": 4630362
+    }, 
+    {
+        "geneEnd": 4640596, 
+        "geneLen": 527, 
+        "geneName": "ndhJ", 
+        "geneStart": 4641123
+    }, 
+    {
+        "geneEnd": 4641116, 
+        "geneLen": 737, 
+        "geneName": "ndhK", 
+        "geneStart": 4641853
+    }, 
+    {
+        "geneEnd": 4641844, 
+        "geneLen": 362, 
+        "geneName": "ndhC", 
+        "geneStart": 4642206
+    }, 
+    {
+        "geneEnd": 4642737, 
+        "geneLen": 335, 
+        "geneName": "hoxR", 
+        "geneStart": 4642402
+    }, 
+    {
+        "geneEnd": 4644264, 
+        "geneLen": 248, 
+        "geneName": "psbE", 
+        "geneStart": 4644016
+    }, 
+    {
+        "geneEnd": 4644411, 
+        "geneLen": 137, 
+        "geneName": "psbF", 
+        "geneStart": 4644274
+    }, 
+    {
+        "geneEnd": 4644551, 
+        "geneLen": 119, 
+        "geneName": "psbL", 
+        "geneStart": 4644432
+    }, 
+    {
+        "geneEnd": 4644743, 
+        "geneLen": 122, 
+        "geneName": "psbJ", 
+        "geneStart": 4644621
+    }, 
+    {
+        "geneEnd": 4644997, 
+        "geneLen": 140, 
+        "geneName": "psaI", 
+        "geneStart": 4645137
+    }, 
+    {
+        "geneEnd": 4651315, 
+        "geneLen": 821, 
+        "geneName": "psbO", 
+        "geneStart": 4652136
+    }, 
+    {
+        "geneEnd": 4657188, 
+        "geneLen": 1286, 
+        "geneName": "ftsZ", 
+        "geneStart": 4655902
+    }, 
+    {
+        "geneEnd": 4681828, 
+        "geneLen": 896, 
+        "geneName": "cphB", 
+        "geneStart": 4682724
+    }, 
+    {
+        "geneEnd": 4711861, 
+        "geneLen": 1052, 
+        "geneName": "hemE", 
+        "geneStart": 4712913
+    }, 
+    {
+        "geneEnd": 4762555, 
+        "geneLen": 785, 
+        "geneName": "cbiM", 
+        "geneStart": 4761770
+    }, 
+    {
+        "geneEnd": 4762844, 
+        "geneLen": 302, 
+        "geneName": "cbiN", 
+        "geneStart": 4762542
+    }, 
+    {
+        "geneEnd": 4763641, 
+        "geneLen": 800, 
+        "geneName": "cbiQ", 
+        "geneStart": 4762841
+    }, 
+    {
+        "geneEnd": 4764586, 
+        "geneLen": 824, 
+        "geneName": "cbiO", 
+        "geneStart": 4763762
+    }, 
+    {
+        "geneEnd": 4786746, 
+        "geneLen": 671, 
+        "geneName": "nth", 
+        "geneStart": 4787417
+    }, 
+    {
+        "geneEnd": 4790980, 
+        "geneLen": 1280, 
+        "geneName": "serS", 
+        "geneStart": 4792260
+    }, 
+    {
+        "geneEnd": 4794087, 
+        "geneLen": 347, 
+        "geneName": "pex", 
+        "geneStart": 4793740
+    }, 
+    {
+        "geneEnd": 4819084, 
+        "geneLen": 1034, 
+        "geneName": "isiA", 
+        "geneStart": 4820118
+    }, 
+    {
+        "geneEnd": 4837529, 
+        "geneLen": 1379, 
+        "geneName": "opcA", 
+        "geneStart": 4838908
+    }, 
+    {
+        "geneEnd": 4839046, 
+        "geneLen": 1529, 
+        "geneName": "zwf", 
+        "geneStart": 4840575
+    }, 
+    {
+        "geneEnd": 4842083, 
+        "geneLen": 1049, 
+        "geneName": "fbp", 
+        "geneStart": 4843132
+    }, 
+    {
+        "geneEnd": 4843778, 
+        "geneLen": 284, 
+        "geneName": "rbpD", 
+        "geneStart": 4844062
+    }, 
+    {
+        "geneEnd": 4872265, 
+        "geneLen": 1097, 
+        "geneName": "hrcA", 
+        "geneStart": 4871168
+    }, 
+    {
+        "geneEnd": 4894756, 
+        "geneLen": 365, 
+        "geneName": "ftrC", 
+        "geneStart": 4894391
+    }, 
+    {
+        "geneEnd": 4899267, 
+        "geneLen": 1685, 
+        "geneName": "lysS", 
+        "geneStart": 4900952
+    }, 
+    {
+        "geneEnd": 4927412, 
+        "geneLen": 1529, 
+        "geneName": "comM", 
+        "geneStart": 4925883
+    }, 
+    {
+        "geneEnd": 4943340, 
+        "geneLen": 683, 
+        "geneName": "ribG", 
+        "geneStart": 4944023
+    }, 
+    {
+        "geneEnd": 4950355, 
+        "geneLen": 459, 
+        "geneName": "rnpB", 
+        "geneStart": 4950814
+    }, 
+    {
+        "geneEnd": 4962715, 
+        "geneLen": 1289, 
+        "geneName": "thrA", 
+        "geneStart": 4964004
+    }, 
+    {
+        "geneEnd": 4964228, 
+        "geneLen": 1322, 
+        "geneName": "petH", 
+        "geneStart": 4965550
+    }, 
+    {
+        "geneEnd": 4967723, 
+        "geneLen": 1004, 
+        "geneName": "prk", 
+        "geneStart": 4966719
+    }, 
+    {
+        "geneEnd": 4984481, 
+        "geneLen": 1790, 
+        "geneName": "typA", 
+        "geneStart": 4986271
+    }, 
+    {
+        "geneEnd": 4992505, 
+        "geneLen": 299, 
+        "geneName": "petF", 
+        "geneStart": 4992804
+    }, 
+    {
+        "geneEnd": 4994186, 
+        "geneLen": 968, 
+        "geneName": "bvdR", 
+        "geneStart": 4993218
+    }, 
+    {
+        "geneEnd": 5019172, 
+        "geneLen": 73, 
+        "geneName": "tRNA-Met", 
+        "geneStart": 5019099
+    }, 
+    {
+        "geneEnd": 5022034, 
+        "geneLen": 1157, 
+        "geneName": "dmnC", 
+        "geneStart": 5020877
+    }, 
+    {
+        "geneEnd": 5038362, 
+        "geneLen": 947, 
+        "geneName": "rpoA", 
+        "geneStart": 5039309
+    }, 
+    {
+        "geneEnd": 5040775, 
+        "geneLen": 224, 
+        "geneName": "infA", 
+        "geneStart": 5040999
+    }, 
+    {
+        "geneEnd": 5041753, 
+        "geneLen": 1313, 
+        "geneName": "secY", 
+        "geneStart": 5043066
+    }, 
+    {
+        "geneEnd": 5072446, 
+        "geneLen": 1163, 
+        "geneName": "argJ", 
+        "geneStart": 5071283
+    }, 
+    {
+        "geneEnd": 5099136, 
+        "geneLen": 1172, 
+        "geneName": "sigF", 
+        "geneStart": 5097964
+    }, 
+    {
+        "geneEnd": 5100554, 
+        "geneLen": 335, 
+        "geneName": "cytA", 
+        "geneStart": 5100219
+    }, 
+    {
+        "geneEnd": 5113924, 
+        "geneLen": 89, 
+        "geneName": "petN", 
+        "geneStart": 5114013
+    }, 
+    {
+        "geneEnd": 5126592, 
+        "geneLen": 1259, 
+        "geneName": "ubiH", 
+        "geneStart": 5127851
+    }, 
+    {
+        "geneEnd": 5144786, 
+        "geneLen": 1055, 
+        "geneName": "psbD", 
+        "geneStart": 5143731
+    }, 
+    {
+        "geneEnd": 5146149, 
+        "geneLen": 1379, 
+        "geneName": "psbC", 
+        "geneStart": 5144770
+    }, 
+    {
+        "geneEnd": 5172554, 
+        "geneLen": 212, 
+        "geneName": "psaE", 
+        "geneStart": 5172342
+    }, 
+    {
+        "geneEnd": 5190441, 
+        "geneLen": 1229, 
+        "geneName": "tufA", 
+        "geneStart": 5191670
+    }, 
+    {
+        "geneEnd": 5191693, 
+        "geneLen": 2078, 
+        "geneName": "fus", 
+        "geneStart": 5193771
+    }, 
+    {
+        "geneEnd": 5204286, 
+        "geneLen": 4679, 
+        "geneName": "gltS", 
+        "geneStart": 5199607
+    }, 
+    {
+        "geneEnd": 5225917, 
+        "geneLen": 3986, 
+        "geneName": "chlH", 
+        "geneStart": 5229903
+    }, 
+    {
+        "geneEnd": 5232168, 
+        "geneLen": 1694, 
+        "geneName": "pknA", 
+        "geneStart": 5230474
+    }, 
+    {
+        "geneEnd": 5235290, 
+        "geneLen": 1793, 
+        "geneName": "pknD", 
+        "geneStart": 5233497
+    }, 
+    {
+        "geneEnd": 5266084, 
+        "geneLen": 671, 
+        "geneName": "ntcA", 
+        "geneStart": 5265413
+    }, 
+    {
+        "geneEnd": 5307699, 
+        "geneLen": 926, 
+        "geneName": "hlpA", 
+        "geneStart": 5308625
+    }, 
+    {
+        "geneEnd": 5365347, 
+        "geneLen": 1034, 
+        "geneName": "chlG", 
+        "geneStart": 5366381
+    }, 
+    {
+        "geneEnd": 5377536, 
+        "geneLen": 884, 
+        "geneName": "rfbD", 
+        "geneStart": 5376652
+    }, 
+    {
+        "geneEnd": 5384447, 
+        "geneLen": 1727, 
+        "geneName": "hepK", 
+        "geneStart": 5386174
+    }, 
+    {
+        "geneEnd": 5397008, 
+        "geneLen": 773, 
+        "geneName": "hisA", 
+        "geneStart": 5397781
+    }, 
+    {
+        "geneEnd": 5407700, 
+        "geneLen": 197, 
+        "geneName": "nblA", 
+        "geneStart": 5407503
+    }, 
+    {
+        "geneEnd": 5457511, 
+        "geneLen": 1079, 
+        "geneName": "fda", 
+        "geneStart": 5458590
+    }, 
+    {
+        "geneEnd": 5490913, 
+        "geneLen": 1082, 
+        "geneName": "psbAIII", 
+        "geneStart": 5489831
+    }, 
+    {
+        "geneEnd": 5514172, 
+        "geneLen": 1898, 
+        "geneName": "ilvG", 
+        "geneStart": 5516070
+    }, 
+    {
+        "geneEnd": 5528319, 
+        "geneLen": 614, 
+        "geneName": "infC", 
+        "geneStart": 5528933
+    }, 
+    {
+        "geneEnd": 5531435, 
+        "geneLen": 548, 
+        "geneName": "ilvN", 
+        "geneStart": 5530887
+    }, 
+    {
+        "geneEnd": 5547991, 
+        "geneLen": 1289, 
+        "geneName": "agp", 
+        "geneStart": 5549280
+    }, 
+    {
+        "geneEnd": 5559022, 
+        "geneLen": 122, 
+        "geneName": "psaM", 
+        "geneStart": 5558900
+    }, 
+    {
+        "geneEnd": 5625309, 
+        "geneLen": 1280, 
+        "geneName": "crhC", 
+        "geneStart": 5624029
+    }, 
+    {
+        "geneEnd": 5666599, 
+        "geneLen": 104, 
+        "geneName": "petM", 
+        "geneStart": 5666703
+    }, 
+    {
+        "geneEnd": 5668065, 
+        "geneLen": 1088, 
+        "geneName": "pdxA", 
+        "geneStart": 5666977
+    }, 
+    {
+        "geneEnd": 5688833, 
+        "geneLen": 260, 
+        "geneName": "psaK", 
+        "geneStart": 5688573
+    }, 
+    {
+        "geneEnd": 5708440, 
+        "geneLen": 941, 
+        "geneName": "tsf", 
+        "geneStart": 5709381
+    }, 
+    {
+        "geneEnd": 5717997, 
+        "geneLen": 1202, 
+        "geneName": "argG", 
+        "geneStart": 5716795
+    }, 
+    {
+        "geneEnd": 5728576, 
+        "geneLen": 212, 
+        "geneName": "ictA", 
+        "geneStart": 5728364
+    }, 
+    {
+        "geneEnd": 5730861, 
+        "geneLen": 647, 
+        "geneName": "patN", 
+        "geneStart": 5730214
+    }, 
+    {
+        "geneEnd": 5730918, 
+        "geneLen": 1928, 
+        "geneName": "pknC", 
+        "geneStart": 5732846
+    }, 
+    {
+        "geneEnd": 5768890, 
+        "geneLen": 857, 
+        "geneName": "dapF", 
+        "geneStart": 5768033
+    }, 
+    {
+        "geneEnd": 5770399, 
+        "geneLen": 1442, 
+        "geneName": "recQ", 
+        "geneStart": 5768957
+    }, 
+    {
+        "geneEnd": 5781503, 
+        "geneLen": 2792, 
+        "geneName": "secA", 
+        "geneStart": 5778711
+    }, 
+    {
+        "geneEnd": 5788301, 
+        "geneLen": 2948, 
+        "geneName": "pepC", 
+        "geneStart": 5791249
+    }, 
+    {
+        "geneEnd": 5797981, 
+        "geneLen": 1082, 
+        "geneName": "psbAI", 
+        "geneStart": 5796899
+    }, 
+    {
+        "geneEnd": 5818141, 
+        "geneLen": 1562, 
+        "geneName": "ndhB", 
+        "geneStart": 5819703
+    }, 
+    {
+        "geneEnd": 5920389, 
+        "geneLen": 1748, 
+        "geneName": "recN", 
+        "geneStart": 5918641
+    }, 
+    {
+        "geneEnd": 5921925, 
+        "geneLen": 3467, 
+        "geneName": "cyaC", 
+        "geneStart": 5925392
+    }, 
+    {
+        "geneEnd": 5930094, 
+        "geneLen": 1379, 
+        "geneName": "gor", 
+        "geneStart": 5931473
+    }, 
+    {
+        "geneEnd": 5942341, 
+        "geneLen": 326, 
+        "geneName": "recR", 
+        "geneStart": 5942015
+    }, 
+    {
+        "geneEnd": 5954798, 
+        "geneLen": 2420, 
+        "geneName": "susA", 
+        "geneStart": 5957218
+    }, 
+    {
+        "geneEnd": 5990851, 
+        "geneLen": 1277, 
+        "geneName": "aroA", 
+        "geneStart": 5992128
+    }, 
+    {
+        "geneEnd": 6009574, 
+        "geneLen": 413, 
+        "geneName": "atpE", 
+        "geneStart": 6009987
+    }, 
+    {
+        "geneEnd": 6010081, 
+        "geneLen": 1448, 
+        "geneName": "atpB", 
+        "geneStart": 6011529
+    }, 
+    {
+        "geneEnd": 6020385, 
+        "geneLen": 653, 
+        "geneName": "exbB", 
+        "geneStart": 6021038
+    }, 
+    {
+        "geneEnd": 6030127, 
+        "geneLen": 548, 
+        "geneName": "accB", 
+        "geneStart": 6030675
+    }, 
+    {
+        "geneEnd": 6030875, 
+        "geneLen": 557, 
+        "geneName": "efp", 
+        "geneStart": 6031432
+    }, 
+    {
+        "geneEnd": 6048452, 
+        "geneLen": 1403, 
+        "geneName": "chlN", 
+        "geneStart": 6049855
+    }, 
+    {
+        "geneEnd": 6050793, 
+        "geneLen": 866, 
+        "geneName": "chlL", 
+        "geneStart": 6051659
+    }, 
+    {
+        "geneEnd": 6079672, 
+        "geneLen": 2291, 
+        "geneName": "pbpB", 
+        "geneStart": 6077381
+    }, 
+    {
+        "geneEnd": 6131152, 
+        "geneLen": 1310, 
+        "geneName": "moeA", 
+        "geneStart": 6132462
+    }, 
+    {
+        "geneEnd": 6153676, 
+        "geneLen": 2258, 
+        "geneName": "psaA", 
+        "geneStart": 6151418
+    }, 
+    {
+        "geneEnd": 6156024, 
+        "geneLen": 2225, 
+        "geneName": "psaB", 
+        "geneStart": 6153799
+    }, 
+    {
+        "geneEnd": 6228174, 
+        "geneLen": 1340, 
+        "geneName": "pmbA", 
+        "geneStart": 6229514
+    }, 
+    {
+        "geneEnd": 6229835, 
+        "geneLen": 1472, 
+        "geneName": "tldD", 
+        "geneStart": 6231307
+    }, 
+    {
+        "geneEnd": 6277667, 
+        "geneLen": 1172, 
+        "geneName": "sigA", 
+        "geneStart": 6278839
+    }, 
+    {
+        "geneEnd": 6287063, 
+        "geneLen": 1292, 
+        "geneName": "glcD", 
+        "geneStart": 6285771
+    }, 
+    {
+        "geneEnd": 6306283, 
+        "geneLen": 980, 
+        "geneName": "accA", 
+        "geneStart": 6305303
+    }, 
+    {
+        "geneEnd": 6320647, 
+        "geneLen": 72, 
+        "geneName": "tRNA-Trp", 
+        "geneStart": 6320575
+    }, 
+    {
+        "geneEnd": 6321066, 
+        "geneLen": 221, 
+        "geneName": "secE", 
+        "geneStart": 6320845
+    }, 
+    {
+        "geneEnd": 6321698, 
+        "geneLen": 632, 
+        "geneName": "nusG", 
+        "geneStart": 6321066
+    }, 
+    {
+        "geneEnd": 6370266, 
+        "geneLen": 71, 
+        "geneName": "tRNA-Cys", 
+        "geneStart": 6370337
+    }, 
+    {
+        "geneEnd": 6394564, 
+        "geneLen": 1361, 
+        "geneName": "hglD", 
+        "geneStart": 6393203
+    }, 
+    {
+        "geneEnd": 6398137, 
+        "geneLen": 3329, 
+        "geneName": "hglC", 
+        "geneStart": 6394808
+    }, 
+    {
+        "geneEnd": 6401676, 
+        "geneLen": 1520, 
+        "geneName": "hetM", 
+        "geneStart": 6400156
+    }, 
+    {
+        "geneEnd": 6403093, 
+        "geneLen": 863, 
+        "geneName": "hetN", 
+        "geneStart": 6402230
+    }, 
+    {
+        "geneEnd": 6403130, 
+        "geneLen": 482, 
+        "geneName": "hetI", 
+        "geneStart": 6403612
+    }
+]
