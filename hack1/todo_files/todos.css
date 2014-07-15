@@ -17,13 +17,18 @@ body {
 #left_panel {
 position:absolute;
 left:30px;
+height:100%;
 }
 #right_panel {
 position:absolute;
 left:450px;
+background:#E5FBFC;
+height:100%;
+width:100%;
 }
 #donut {
 top:80px;
+margin-left:60px;
 }
 
 #todoapp {
@@ -143,9 +148,10 @@ top:80px;
 }
 
 #gene-list li {
-	padding: 18px 20px 18px 0;
+	padding: 7px 7px 7px 0;
+	margin-left: 10px;
 	position: relative;
-	font-size: 24px;
+	font-size: 20px;
 	border-bottom: 1px solid #cccccc;
 }
 
