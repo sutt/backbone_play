@@ -44,10 +44,12 @@ $(function(){
 			,geneLen: 0
 			,holdingInt: 0
 			,holdingStr: ""
+			,holdingBool: true
 			,title: "empty todo..."
 			,order: Todos.nextOrder()
 			,done: false
 			,currentSearch: ""
+			
 			}
 		},
 		
@@ -74,6 +76,8 @@ $(function(){
       return this.where({done: true});
     },
 
+	
+	
     // Filter down the list to only todo items that are still not finished.
     remaining: function() {
       return this.where({done: false});
@@ -115,7 +119,11 @@ $(function(){
     done: function() {
       return this.where({done: true});
     },
-
+	
+	holdingBool: function() {
+      return this.where({holdingBool: true});
+    },
+	
     // Filter down the list to only todo items that are still not finished.
     remaining: function() {
       return this.where({done: false});
@@ -386,12 +394,27 @@ $(function(){
 	  var myResults = _.filter(searchList, function(genename) { return (genename.search(mySearch) > -1); } );
 	  console.log('results: ' + myResults.toString());
 	  
-	  Genes.each(function(gene_model) {gene_model.destroy();});
-	  myResults.forEach(function(result_gene) { 
+	  console.log('Genes Length1:' + Genes.length);
+	  //console.log('LS1:' + (localStorage['gene-list'].toString()
+	//						.split(",").length - 1) );
+	  // Genes.forEach(function(gene_model) {
+		// var gn = '' //gene_model.geneName();
+		// console.log( gn + '  destroy'); 
+		//gene_model.destroy();
 		
+	  // });
+	  _.invoke(Genes.holdingBool(), 'destroy');
+	  
+	  console.log('GenesLength2: ' + Genes.length);
+	  //console.log('LS2:' + (localStorage['gene-list'].toString()
+	//				.split(",").length - 1) );
+					
+	  myResults.forEach(function(result_gene) { 
+			console.log(result_gene + '  construct');
 			Genes.create( {geneName: result_gene
 								 ,title: 'my_title'
 								 ,currentSearch: 'my_search'
+								 ,holdingBool:true
 							});
 		});
 		//result_gene.renderSearchBox; });
@@ -404,19 +427,16 @@ $(function(){
 	  switch(e.keyCode) {
 		
 		case 113:
-			Genes.create({geneName: 'just_dna', title: this.input.val(), currentSearch: this.input.val()});
-			console.log('q creates a gene model');
 			return;
 		case 119:
 			//Destroy bottom tile
-			console.log('dubya');
-			Genes.lastInOrder().destroy();
-			Genes.each(function(gene) { gene.destroy(); });
-			this.input.val('');
+			
+			//Genes.lastInOrder().destroy();
+			//Genes.each(function(gene) { gene.destroy(); });
+			
 			return;
 		case 122:
 			//z: search
-			console.log(_.filter( ["sut", "nes", "genospace"], function(x) { return (x.search("e") > -1); } ));
 			return;
 	  // } else {
 	    case 13:
