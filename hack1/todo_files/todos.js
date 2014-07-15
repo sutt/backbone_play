@@ -38,7 +38,7 @@ $(function(){
   
 	defaults: function() {
 		return {
-			name: "gene name"
+			geneName: "gene name"
 			,geneStart: 0
 			,geneEnd: 0
 			,geneLen: 0
@@ -228,6 +228,84 @@ $(function(){
     }
 
   });
+  
+  var GeneView = Backbone.View.extend({
+
+    //... is a list tag.
+    tagName:  "li",
+
+    // Cache the template function for a single item.
+    template: _.template($('#gene-template').html()),
+
+    // The DOM events specific to an item.
+    events: {
+      "click .toggle"   : "toggleDone",
+      "dblclick .view"  : "edit",
+      "click a.destroy" : "clear",
+      "keypress .edit"  : "updateOnEnter",
+      "blur .edit"      : "close",
+	  "click a.sut_play" : "sut_play"
+    },
+
+	// Todo.View is the view of our results, the model is of the individual search terms
+	// What we need is a model of a search result to encapsulate the individual items
+	// 
+	
+    // The TodoView listens for changes to its model, re-rendering. Since there's
+    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+    // app, we set a direct reference on the model for convenience.
+    
+	
+	initialize: function() {
+      this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'destroy', this.remove);
+    },
+
+    // Re-render the titles of the todo item.
+    render: function() {
+      this.$el.html(this.template(this.model.toJSON()));
+      this.$el.toggleClass('done', this.model.get('done'));
+      this.input = this.$('.edit');
+      return this;
+    },
+
+    // Toggle the `"done"` state of the model.
+    toggleDone: function() {
+      this.model.toggle();
+    },
+
+    // Switch this view into `"editing"` mode, displaying the input field.
+    edit: function() {
+      this.$el.addClass("editing");
+      this.input.focus();
+    },
+	
+	
+    // Close the `"editing"` mode, saving changes to the todo.
+    close: function() {
+      var value = this.input.val();
+      if (!value) {
+        this.clear();
+      } else {
+        this.model.save({title: value});
+        this.$el.removeClass("editing");
+      }
+    },
+
+    // If you hit `enter`, we're through editing the item.
+    updateOnEnter: function(e) {
+      myKeyCode = e.keyCode;
+	  //alert(myKeyCode);
+	  //if (e.keyCode == 13) this.close();
+	  if (e.keyCode == 13) this.close()
+    },
+
+    // Remove the item, destroy the model.
+    clear: function() {
+      this.model.destroy();
+    }
+
+  });
 
   // The Application
   // ---------------
@@ -262,6 +340,8 @@ $(function(){
       this.listenTo(Todos, 'add', this.addOne);
       this.listenTo(Todos, 'reset', this.addAll);
       this.listenTo(Todos, 'all', this.render);
+	  
+	  this.listenTo(Genes, 'add', this.renderSearchBox);
 
       this.footer = this.$('footer');
       this.main = $('#main');
@@ -293,7 +373,12 @@ $(function(){
       var view = new TodoView({model: todo});
       this.$("#todo-list").append(view.render().el);
     },
-
+	
+	renderSearchBox: function(gene) {
+	 var view = new GeneView({model:gene});
+	 this.$("#gene-list").append(view.render().el);
+	},
+	
     // Add all items in the **Todos** collection at once.
     addAll: function() {
       Todos.each(this.addOne, this);
@@ -316,13 +401,14 @@ $(function(){
 	  switch(e.keyCode) {
 		
 		case 113:
-			Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-			console.log('a regular create with a 113');
+			Genes.create({geneName: 'just_dna', title: this.input.val(), currentSearch: this.input.val()});
+			console.log('q creates a gene model');
 			return;
 		case 119:
 			//Destroy bottom tile
 			console.log('dubya');
-			Todos.lastInOrder().destroy();
+			Genes.lastInOrder().destroy();
+			Genes.each(function(gene) { gene.destroy(); });
 			this.input.val('');
 			return;
 		case 122:

@@ -13,17 +13,20 @@
 </head>
 
 <body>
-
+	<div id="left_panel">
 	<div id="todoapp">
-
     <header>
       <h1>INTELLI - SENSE</h1>
 	  <div id="instructions">
 		Proof of Concept for Intellisense Search
 	  </div>
-	  <input id="new-todo" type="text" placeholder="What needs to be done?">
+	  <input id="new-todo" type="text" placeholder="Gene Name? e.g. dnaA">
     </header>
-
+	
+	<section  id="search-box">
+      <ul id="gene-list"></ul>
+    </section>
+	
     <section  id="main" style="display: none;">
       <ul id="todo-list"></ul>
     </section>
@@ -35,6 +38,7 @@
 
   </div>
 
+  <!--
   <div id="credits">
     <br>Hacked by: <a href="http://github.com/sutt">SUT</a>.
   </div>
@@ -47,10 +51,12 @@
   <form id="rotate_form" style="margin-top:10px;">
 	<label> <input id="rotate_input" type="button" > Rotate that thing </label>
   </form> 
-  
+  -->
+  </div>
+  <div id="right_panel">
   <svg id="donut" >
   </svg>
-  
+  </div>
   <script src="./todo_files/json2.js"></script>
   <script src="./todo_files/jquery.js"></script>
   <script src="./todo_files/underscore.js"></script>
@@ -65,7 +71,14 @@
   <script src="./pie_files/pie.js"> </script>
   
   <!-- Templates -->
-
+	<script type="text/template" id = "gene-template">
+	<div class="view">
+		
+			<label> <%- geneName %> </label>
+		
+	</div>
+	</script>
+  
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
