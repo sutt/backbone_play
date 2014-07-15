@@ -74,16 +74,22 @@ top:80px;
 	/* tabindex="3"; */
 }
 
+#GOI-box {
+	position:absolute;
+	top:350px;
+	}
+
 #main {
 	display: none;
 	width: 350px;
-	position:absolute;
-	top:350px;
+	margin-top:25px;
+	/* position:absolute;
+	top:350px; */
 }
 
 #search-box {
 	/* display: none; */
-	width: 466px;
+	width: 300px;
 }
 
 #todo-list {
@@ -202,6 +208,8 @@ top:80px;
 }
 
 #todoapp footer {
+	/* position:absolute; */
+	/* top:290px; */
 	display: none;
 	margin: 0 -20px -20px -20px;
 	overflow: hidden;
