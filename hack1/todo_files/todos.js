@@ -247,14 +247,6 @@ $(function(){
 	  "click a.sut_play" : "sut_play"
     },
 
-	// Todo.View is the view of our results, the model is of the individual search terms
-	// What we need is a model of a search result to encapsulate the individual items
-	// 
-	
-    // The TodoView listens for changes to its model, re-rendering. Since there's
-    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
-    // app, we set a direct reference on the model for convenience.
-    
 	
 	initialize: function() {
       this.listenTo(this.model, 'change', this.render);
@@ -347,6 +339,7 @@ $(function(){
       this.main = $('#main');
 
       Todos.fetch();  //So fetch knows to goto localStorage because the definition of todos
+	  //Genes.fetch();
     },
 
     // Re-rendering the App just means refreshing the statistics -- the rest
@@ -393,6 +386,16 @@ $(function(){
 	  var myResults = _.filter(searchList, function(genename) { return (genename.search(mySearch) > -1); } );
 	  console.log('results: ' + myResults.toString());
 	  
+	  Genes.each(function(gene_model) {gene_model.destroy();});
+	  myResults.forEach(function(result_gene) { 
+		
+			Genes.create( {geneName: result_gene
+								 ,title: 'my_title'
+								 ,currentSearch: 'my_search'
+							});
+		});
+		//result_gene.renderSearchBox; });
+		
 	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
 	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119) && (e.keyCode != 122) )) return;	  
 	  //if (!this.input.val()) return;
