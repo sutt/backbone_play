@@ -34,6 +34,28 @@ $(function(){
 
   });
 
+  var Gene = Backbone.Model.extend({
+  
+	defaults: function() {
+		return {
+			name: "gene name"
+			,geneStart: 0
+			,geneEnd: 0
+			,geneLen: 0
+			,holdingInt: 0
+			,holdingStr: ""
+			,title: "empty todo..."
+			,order: Todos.nextOrder()
+			,done: false
+			,currentSearch: ""
+			}
+		},
+		
+	toggle: function() {
+      this.save({done: !this.get("done")});
+    }
+	});
+
   // Todo Collection
   // ---------------
 
@@ -79,8 +101,51 @@ $(function(){
 
   });
 
+  // The collection of todos is backed by *localStorage* instead of a remote
+  // server.
+  var GeneList = Backbone.Collection.extend({
+
+    // Reference to this collection's model.
+    model: Gene,
+
+    // Save all of the todo items under the `"todos-backbone"` namespace.
+    localStorage: new Backbone.LocalStorage("gene-list"),
+
+    // Filter down the list of all todo items that are finished.
+    done: function() {
+      return this.where({done: true});
+    },
+
+    // Filter down the list to only todo items that are still not finished.
+    remaining: function() {
+      return this.where({done: false});
+    },
+
+    // We keep the Todos in sequential order, despite being saved by unordered
+    // GUID in the database. This generates the next order number for new items.
+    nextOrder: function() {
+      if (!this.length) return 1;
+      return this.last().get('order') + 1;
+    },
+
+	//added to remove bottom tile
+	lastInOrder: function() {
+		console.log('in kill bottom');
+		//console.log(this.last());
+		//console.log(this.last());  //.model.toJSON());
+		//this.last().clear(); //model.destroy();
+		return this.last();
+		
+	},
+	
+    // Todos are sorted by their original insertion order.
+    comparator: 'order'
+
+  });
+  
   // Create our global collection of **Todos**.
   var Todos = new TodoList;
+  var Genes = new GeneList;
   
   // Todo Item View
   // --------------
@@ -237,12 +302,8 @@ $(function(){
     // If you hit return in the main input field, create new **Todo** model,
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
-      //console.log(e.keyCode);
-	  //console.log(e.type);
-	  //console.log(e.key);
-	  //if (e.keyCode == 40) console.log('down arrow');  //This keyPress is unavailable in the scope of e in this function, maybe because it's an input box
-	  //debuggingVal = this.input.val();
-	  var mySearch = this.input.val() + String.fromCharCode(e.keyCode);
+	 
+ 	  var mySearch = this.input.val() + String.fromCharCode(e.keyCode);
 	  console.log('searching: ' + mySearch);
 	  var myResults = _.filter(searchList, function(genename) { return (genename.search(mySearch) > -1); } );
 	  console.log('results: ' + myResults.toString());
