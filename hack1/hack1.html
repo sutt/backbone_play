@@ -13,35 +13,35 @@
 </head>
 
 <body>
+
 	<div id="left_panel">
-	<div id="todoapp">
-    <header>
-      <h1>Nostoc PCC7120</h1>
-	  <div id="instructions">
-		Proof of Concept for Intellisense Search
+		<div id="todoapp">
+		
+		<header>
+		  <h1>Nostoc PCC7120</h1>
+		  <div id="instructions">
+			Proof of Concept for Intellisense Search
+		  </div>
+		  <input id="new-todo" type="text" placeholder="Gene Name? e.g. dnaA">
+		</header>
+		
+		<section  id="search-box">
+		  <ul id="gene-list"></ul>
+		</section>
+		
+		<div id = "GOI-box" >
+			<footer style="display: none;">
+			  <input id="input-clear-completed" type="button"> Clear Completed in An Input </input> 
+			  <div id="todo-count"></div>
+			</footer>
+			<section  id="main" style="display: none;">
+			  <ul id="todo-list"></ul>
+			</section>
+		</div>
+		
 	  </div>
-	  <input id="new-todo" type="text" placeholder="Gene Name? e.g. dnaA">
-    </header>
-	
-	<section  id="search-box">
-      <ul id="gene-list"></ul>
-    </section>
-	
-    <div id = "GOI-box" >
-	<footer style="display: none;">
-      <input id="input-clear-completed" type="button"> Clear Completed in An Input </input> 
-      <div id="todo-count"></div>
-    </footer>
-	
-	<section  id="main" style="display: none;">
-      <ul id="todo-list"></ul>
-    </section>
-	</div>
-    
-
   </div>
-
-  </div>
+  
   <div id="right_panel">
   <svg id="donut" >
   </svg>
@@ -80,9 +80,9 @@
 
   <script type="text/template" id="stats-template">
     <% if (done) { %>
-      <a  id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+      <a  id="clear-completed">Clear <%= done %><%= done == 1 ? 'gene' : 'genes' %></a>
     <% } %>
-    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+    <div class="todo-count"><b><%= remaining %></b> &nbsp <%= remaining == 1 ? 'Gene' : 'Genes' %>-of-Interest:</div>
   </script>
 
 	
