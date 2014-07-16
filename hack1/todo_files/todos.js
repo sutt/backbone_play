@@ -42,11 +42,11 @@ $(function(){
 			,geneStart: 0
 			,geneEnd: 0
 			,geneLen: 0
-			,holdingInt: 0
+			,searchSelected: false
 			,holdingStr: ""
 			,holdingBool: true
 			,title: "empty todo..."
-			,order: Todos.nextOrder()
+			,order: Genes.nextOrder()
 			,done: false
 			,currentSearch: ""
 			
@@ -322,16 +322,14 @@ $(function(){
 
     // Delegated events for creating new items, and clearing completed ones.
     events: {
-      "keypress #new-todo":  "createOnEnter",
+      "keypress #new-todo":  "inputType",
+	  "keydown":  			  "commandType",  
       "click #clear-completed": "clearCompleted",
       "click #toggle-all": "toggleAllComplete"
     },
-
-    // At initialization we bind to the relevant events on the `Todos`
-    // collection, when items are added or changed. Kick things off by
-    // loading any preexisting todos that might be saved in *localStorage*.
 	
-	//Here we need
+
+		
     initialize: function() {
 
       this.input = this.$("#new-todo");
@@ -346,12 +344,10 @@ $(function(){
       this.footer = this.$('footer');
       this.main = $('#main');
 
-      Todos.fetch();  //So fetch knows to goto localStorage because the definition of todos
+      Todos.fetch(); 
 	  //Genes.fetch();
     },
 
-    // Re-rendering the App just means refreshing the statistics -- the rest
-    // of the app doesn't change.
     render: function() {
       var done = Todos.done().length;
       var remaining = Todos.remaining().length;
@@ -368,8 +364,6 @@ $(function(){
       //this.allCheckbox.checked = !remaining;
     },
 
-    // Add a single todo item to the list by creating a view for it, and
-    // appending its element to the `<ul>`.
     addOne: function(todo) {
       var view = new TodoView({model: todo});
       this.$("#todo-list").append(view.render().el);
@@ -380,43 +374,51 @@ $(function(){
 	 this.$("#gene-list").append(view.render().el);
 	},
 	
-    // Add all items in the **Todos** collection at once.
-    addAll: function() {
-      Todos.each(this.addOne, this);
-    },
-
-    // If you hit return in the main input field, create new **Todo** model,
-    // persisting it to *localStorage*.
-    createOnEnter: function(e) {
-	 
- 	  var mySearch = this.input.val() + String.fromCharCode(e.keyCode);
-	  console.log('searching: ' + mySearch);
-	  var myResults = _.filter(searchList, function(genename) { return (genename.search(mySearch) > -1); } );
-	  console.log('results: ' + myResults.toString());
-	  
-	  console.log('Genes Length1:' + Genes.length);
-	  //console.log('LS1:' + (localStorage['gene-list'].toString()
-	//						.split(",").length - 1) );
-	  // Genes.forEach(function(gene_model) {
-		// var gn = '' //gene_model.geneName();
-		// console.log( gn + '  destroy'); 
-		//gene_model.destroy();
+	intelliFunc: function(s) {
+	
+		var sLen = s.length;
 		
-	  // });
-	  _.invoke(Genes.holdingBool(), 'destroy');
-	  
-	  console.log('GenesLength2: ' + Genes.length);
-	  //console.log('LS2:' + (localStorage['gene-list'].toString()
-	//				.split(",").length - 1) );
+		var matchG = _.filter( 
+						searchList
+						,function(L) { 
+							return (L.slice(0,sLen)
+									.toLowerCase()
+									.search(s.toLowerCase()
+									) > -1); 
+						} 
+		);
+		//console.log('LS1:' + (localStorage['gene-list'].toString()
+		//						.split(",").length - 1) );
+		_.invoke(Genes.holdingBool(), 'destroy');
 					
-	  myResults.forEach(function(result_gene) { 
-			console.log(result_gene + '  construct');
-			Genes.create( {geneName: result_gene
-								 ,title: 'my_title'
-								 ,currentSearch: 'my_search'
-								 ,holdingBool:true
+		matchG.forEach(function(g) { 
+			Genes.create( {geneName: g
 							});
 		});
+	},
+
+	commandType: function(e) {
+	
+		//delete typed in input box
+		if (document.activeElement.id == 'new-todo' 
+		    && e.keyCode == 8) {
+				var s = this.input.val();
+				s = s.slice(0,s.length-1);
+				this.intelliFunc(s);
+		
+		
+			
+			}
+	},
+	
+    inputType: function(e) {
+	 
+ 	  var mySearch = this.input.val() 
+					 + String.fromCharCode(e.keyCode);
+	  
+	  this.intelliFunc(mySearch);
+	  
+	
 		//result_gene.renderSearchBox; });
 		
 	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
