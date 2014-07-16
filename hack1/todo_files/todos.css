@@ -36,18 +36,6 @@ margin-left:60px;
 	padding: 20px;
 	margin-bottom: 40px;
 	width:300px;
-	/*
-	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-ms-border-radius: 0 0 5px 5px;
-	-o-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
-	*/
 }
 
 #todoapp h1 {
@@ -81,7 +69,7 @@ margin-left:60px;
 
 #GOI-box {
 	position:absolute;
-	top:350px;
+	top:370px;
 	}
 
 #main {
@@ -149,19 +137,26 @@ margin-left:60px;
 
 #gene-list li {
 	padding: 7px 7px 7px 0;
-	margin-left: 10px;
 	position: relative;
 	font-size: 20px;
 	border-bottom: 1px solid #cccccc;
+}
+
+#gene-list li label {
+		margin-left: 10px;
 }
 
 #gene-list li:last-child {
 	border-bottom: none;
 }
 
-#gene-list li.done label {
-	color: #777777;
-	text-decoration: line-through;
+#gene-list li.searchSelected  {
+	
+	background: #c6dbef; /*#2171b5;  #4292c6; */
+	/* color: #777777;
+	 text-decoration: line-through; 
+	 ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"];
+	 */
 }
 
 

@@ -1,9 +1,8 @@
 // An example Backbone application contributed by
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses a simple
-// [LocalStorage adapter](backbone-localstorage.html)
-// to persist Backbone models within your browser.
 
-// Load the application once the DOM is ready, using `jQuery.ready`:
+var maxResults = 5;
+
 $(function(){
 	var searchList;
 	$.getJSON("gl0.json", function(json) {
@@ -11,14 +10,10 @@ $(function(){
 			return x.geneName;
 			});
 	});
-  // Todo Model
-  // ----------
-
-  // Our basic **Todo** model has `title`, `order`, and `done` attributes.
+  
   var Todo = Backbone.Model.extend({
 
-    // Default attributes for the todo item.
-    defaults: function() {
+	defaults: function() {
       return {
         title: "empty todo...",
         order: Todos.nextOrder(),
@@ -27,7 +22,6 @@ $(function(){
       };
     },
 
-    // Toggle the `done` state of this todo item.
     toggle: function() {
       this.save({done: !this.get("done")});
     }
@@ -53,139 +47,106 @@ $(function(){
 			}
 		},
 		
-	toggle: function() {
-      this.save({done: !this.get("done")});
+	selectedToggle: function() {
+	  console.log('in model');
+      this.save({searchSelected: !this.get("searchSelected")});
     }
 	});
 
-  // Todo Collection
-  // ---------------
-
-  // The collection of todos is backed by *localStorage* instead of a remote
-  // server.
+	
   var TodoList = Backbone.Collection.extend({
 
-    // Reference to this collection's model.
     model: Todo,
 
-    // Save all of the todo items under the `"todos-backbone"` namespace.
     localStorage: new Backbone.LocalStorage("todos-backbone"),
 
-    // Filter down the list of all todo items that are finished.
     done: function() {
       return this.where({done: true});
     },
 
-	
-	
-    // Filter down the list to only todo items that are still not finished.
     remaining: function() {
       return this.where({done: false});
     },
 
-    // We keep the Todos in sequential order, despite being saved by unordered
-    // GUID in the database. This generates the next order number for new items.
+   
     nextOrder: function() {
       if (!this.length) return 1;
       return this.last().get('order') + 1;
     },
 
-	//added to remove bottom tile
+
 	lastInOrder: function() {
-		console.log('in kill bottom');
-		//console.log(this.last());
-		//console.log(this.last());  //.model.toJSON());
 		//this.last().clear(); //model.destroy();
 		return this.last();
-		
 	},
 	
-    // Todos are sorted by their original insertion order.
     comparator: 'order'
 
   });
 
-  // The collection of todos is backed by *localStorage* instead of a remote
-  // server.
+ 
   var GeneList = Backbone.Collection.extend({
 
-    // Reference to this collection's model.
     model: Gene,
 
-    // Save all of the todo items under the `"todos-backbone"` namespace.
     localStorage: new Backbone.LocalStorage("gene-list"),
-
-    // Filter down the list of all todo items that are finished.
+	
     done: function() {
       return this.where({done: true});
     },
+	
+	getSelectedIndex: function() {
+		if (this.where({searchSelected:true}).length == 0)
+				return 0; 
+		return this.findWhere({searchSelected:true})
+						.get('order');
+		
+	},
+	
+	orderI: function(i) {
+		return this.where({order: i});
+	},
 	
 	holdingBool: function() {
       return this.where({holdingBool: true});
     },
 	
-    // Filter down the list to only todo items that are still not finished.
     remaining: function() {
       return this.where({done: false});
     },
 
-    // We keep the Todos in sequential order, despite being saved by unordered
-    // GUID in the database. This generates the next order number for new items.
     nextOrder: function() {
       if (!this.length) return 1;
       return this.last().get('order') + 1;
     },
 
-	//added to remove bottom tile
 	lastInOrder: function() {
-		console.log('in kill bottom');
-		//console.log(this.last());
-		//console.log(this.last());  //.model.toJSON());
-		//this.last().clear(); //model.destroy();
 		return this.last();
-		
 	},
-	
-    // Todos are sorted by their original insertion order.
+
     comparator: 'order'
 
   });
   
-  // Create our global collection of **Todos**.
+  // Create our global collections.
   var Todos = new TodoList;
   var Genes = new GeneList;
   
-  // Todo Item View
-  // --------------
-
-  // The DOM element for a todo item...
+  
   var TodoView = Backbone.View.extend({
 
-    //... is a list tag.
     tagName:  "li",
 
-    // Cache the template function for a single item.
     template: _.template($('#item-template').html()),
 
-    // The DOM events specific to an item.
     events: {
       "click .toggle"   : "toggleDone",
       "dblclick .view"  : "edit",
       "click a.destroy" : "clear",
       "keypress .edit"  : "updateOnEnter",
       "blur .edit"      : "close",
-	  "click a.sut_play" : "sut_play"
     },
 
-	// Todo.View is the view of our results, the model is of the individual search terms
-	// What we need is a model of a search result to encapsulate the individual items
-	// 
-	
-    // The TodoView listens for changes to its model, re-rendering. Since there's
-    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
-    // app, we set a direct reference on the model for convenience.
-    
-	
 	initialize: function() {
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
@@ -211,7 +172,6 @@ $(function(){
     },
 	
 	
-    // Close the `"editing"` mode, saving changes to the todo.
     close: function() {
       var value = this.input.val();
       if (!value) {
@@ -222,7 +182,6 @@ $(function(){
       }
     },
 
-    // If you hit `enter`, we're through editing the item.
     updateOnEnter: function(e) {
       myKeyCode = e.keyCode;
 	  //alert(myKeyCode);
@@ -230,7 +189,6 @@ $(function(){
 	  if (e.keyCode == 13) this.close()
     },
 
-    // Remove the item, destroy the model.
     clear: function() {
       this.model.destroy();
     }
@@ -239,97 +197,52 @@ $(function(){
   
   var GeneView = Backbone.View.extend({
 
-    //... is a list tag.
     tagName:  "li",
 
-    // Cache the template function for a single item.
     template: _.template($('#gene-template').html()),
 
-    // The DOM events specific to an item.
     events: {
-      "click .toggle"   : "toggleDone",
-      "dblclick .view"  : "edit",
-      "click a.destroy" : "clear",
-      "keypress .edit"  : "updateOnEnter",
-      "blur .edit"      : "close",
-	  "click a.sut_play" : "sut_play"
+      "click"   : "toggleSearch",
     },
 
-	
 	initialize: function() {
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
     },
 
-    // Re-render the titles of the todo item.
     render: function() {
       this.$el.html(this.template(this.model.toJSON()));
-      this.$el.toggleClass('done', this.model.get('done'));
+      this.$el.toggleClass('searchSelected', 
+							this.model.get('searchSelected'));
       this.input = this.$('.edit');
       return this;
     },
 
-    // Toggle the `"done"` state of the model.
-    toggleDone: function() {
-      this.model.toggle();
-    },
+	toggleSearch: function() {
+		this.model.selectedToggle();
+		console.log('in gene view');
+	},
 
-    // Switch this view into `"editing"` mode, displaying the input field.
-    edit: function() {
-      this.$el.addClass("editing");
-      this.input.focus();
-    },
-	
-	
-    // Close the `"editing"` mode, saving changes to the todo.
-    close: function() {
-      var value = this.input.val();
-      if (!value) {
-        this.clear();
-      } else {
-        this.model.save({title: value});
-        this.$el.removeClass("editing");
-      }
-    },
-
-    // If you hit `enter`, we're through editing the item.
-    updateOnEnter: function(e) {
-      myKeyCode = e.keyCode;
-	  //alert(myKeyCode);
-	  //if (e.keyCode == 13) this.close();
-	  if (e.keyCode == 13) this.close()
-    },
-
-    // Remove the item, destroy the model.
     clear: function() {
       this.model.destroy();
     }
 
   });
 
-  // The Application
-  // ---------------
 
-  // Our overall **AppView** is the top-level piece of UI.
   var AppView = Backbone.View.extend({
 
-    // Instead of generating a new element, bind to the existing skeleton of
-    // the App already present in the HTML.
     el: $("#todoapp"),
 
-    // Our template for the line of statistics at the bottom of the app.
     statsTemplate: _.template($('#stats-template').html()),
 
-    // Delegated events for creating new items, and clearing completed ones.
     events: {
       "keypress #new-todo":  "inputType",
 	  "keydown":  			  "commandType",  
       "click #clear-completed": "clearCompleted",
       "click #toggle-all": "toggleAllComplete"
     },
-	
-
-		
+			
     initialize: function() {
 
       this.input = this.$("#new-todo");
@@ -376,8 +289,10 @@ $(function(){
 	
 	intelliFunc: function(s) {
 	
+		_.invoke(Genes.holdingBool(), 'destroy');
+		if (s.length > 0) {
+		//Genes.clear();
 		var sLen = s.length;
-		
 		var matchG = _.filter( 
 						searchList
 						,function(L) { 
@@ -389,67 +304,73 @@ $(function(){
 		);
 		//console.log('LS1:' + (localStorage['gene-list'].toString()
 		//						.split(",").length - 1) );
-		_.invoke(Genes.holdingBool(), 'destroy');
-					
+		
+		
+		//for (i=0; i<Math.min(5,matchG);i++) {
 		matchG.forEach(function(g) { 
 			Genes.create( {geneName: g
 							});
 		});
+		}
 	},
 
 	commandType: function(e) {
-	
-		//delete typed in input box
-		if (document.activeElement.id == 'new-todo' 
-		    && e.keyCode == 8) {
+		//console.log('commandtype' + e.keyCode);
+		
+		//DELETE typed in input box
+		  //if (document.activeElement.id == 'new-todo' && e.keyCode == 8) {
+		  if ( e.keyCode == 8) {
 				var s = this.input.val();
-				s = s.slice(0,s.length-1);
-				this.intelliFunc(s);
-		
-		
-			
+				this.intelliFunc(s.slice(0,s.length-1));
 			}
+		
+		//DOWN arrow
+		if (e.keyCode == 40) {
+		 var ind = Genes.getSelectedIndex();
+		 //turn off last, ind
+		 if ((ind != 0) && (ind != 5)) 
+			Genes.orderI(ind).forEach(function(g){g.selectedToggle();}); 
+		 //turn on next, ind+1
+		 if (ind !=5) { 
+			Genes.orderI(ind+1).forEach(function(g){g.selectedToggle();});}
+		}
+		
+		//UP arrow
+		if (e.keyCode == 38) {
+			var ind = Genes.getSelectedIndex();
+			//turn off old
+			if (ind != 0) 
+			   Genes.orderI(ind).forEach(function(g){g.selectedToggle();}); 
+			//turn on new, ind-1
+			if ((ind != 0) && (ind != 1)) 
+			   Genes.orderI(ind-1).forEach(function(g){g.selectedToggle();});
+		}
+		
 	},
 	
     inputType: function(e) {
 	 
  	  var mySearch = this.input.val() 
 					 + String.fromCharCode(e.keyCode);
-	  
 	  this.intelliFunc(mySearch);
-	  
-	
-		//result_gene.renderSearchBox; });
+	  if (e.keyCode != 13)  return;	  
+	  //ENTER
 		
-	  //if ((e.keyCode != 13) || (e.keyCode != 113)) return;	  
-	  if ( ((e.keyCode != 13) && (e.keyCode != 113) && (e.keyCode != 119) && (e.keyCode != 122) )) return;	  
-	  //if (!this.input.val()) return;
-	  
-	  //if (e.keyCode == 113) {
-	  switch(e.keyCode) {
-		
-		case 113:
-			return;
-		case 119:
-			//Destroy bottom tile
-			
-			//Genes.lastInOrder().destroy();
-			//Genes.each(function(gene) { gene.destroy(); });
-			
-			return;
-		case 122:
-			//z: search
-			return;
-	  // } else {
-	    case 13:
-			Todos.create({title: this.input.val(), currentSearch: this.input.val()});
-			console.log('a regular create with return');
-			this.input.val('');
+		//typing into box
+		console.log('selind: ' + Genes.getSelectedIndex());
+		if (Genes.getSelectedIndex() == 0) {
+		Todos.create({title: this.input.val(), 
+					  currentSearch: this.input.val()});
+					  console.log('reg input');
+		//selected from box
+		} else {
+			var i = Genes.getSelectedIndex();
+			goi_inp = Genes.orderI(i).forEach(function(x) {
+			console.log(x.get('geneName'))});
+		}						
+		//finish the same way
+		this.input.val('');
 		return;
-	    //debuggingVal = this.input.val();
-	  }
-	  
-	  
     },
 
     // Clear all done todo items, destroying their models.
