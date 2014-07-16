@@ -327,12 +327,14 @@ $(function(){
 		//DOWN arrow
 		if (e.keyCode == 40) {
 		 var ind = Genes.getSelectedIndex();
+		 console.log('start ind:' + ind);
 		 //turn off last, ind
 		 if ((ind != 0) && (ind != 5)) 
 			Genes.orderI(ind).forEach(function(g){g.selectedToggle();}); 
 		 //turn on next, ind+1
 		 if (ind !=5) { 
 			Genes.orderI(ind+1).forEach(function(g){g.selectedToggle();});}
+		 console.log('end ind:' + Genes.getSelectedIndex());
 		}
 		
 		//UP arrow
@@ -349,28 +351,35 @@ $(function(){
 	},
 	
     inputType: function(e) {
-	 
- 	  var mySearch = this.input.val() 
-					 + String.fromCharCode(e.keyCode);
-	  this.intelliFunc(mySearch);
-	  if (e.keyCode != 13)  return;	  
-	  //ENTER
-		
-		//typing into box
-		console.log('selind: ' + Genes.getSelectedIndex());
-		if (Genes.getSelectedIndex() == 0) {
-		Todos.create({title: this.input.val(), 
-					  currentSearch: this.input.val()});
-					  console.log('reg input');
-		//selected from box
-		} else {
-			var i = Genes.getSelectedIndex();
-			goi_inp = Genes.orderI(i).forEach(function(x) {
-			console.log(x.get('geneName'))});
-		}						
-		//finish the same way
-		this.input.val('');
-		return;
+	
+		//ENTER
+		if (e.keyCode == 13) {
+			
+			//typed into box
+			if (Genes.getSelectedIndex() == 0) {
+			Todos.create({title: this.input.val(), 
+						  currentSearch: this.input.val()});
+			
+			//selected from result-box
+			} else {
+				var i = Genes.getSelectedIndex();
+				Genes.orderI(i).forEach(function(x) {
+					Todos.create({title: x.get('geneName'), 
+								  currentSearch: x.get('geneName')
+								  });
+				});
+			}
+			
+			this.input.val('');			
+		}
+		if (e.keyCode == 13) return;
+
+		//All other typed keys prompt intellisense search
+			var mySearch = this.input.val() 
+						 + String.fromCharCode(e.keyCode);
+			this.intelliFunc(mySearch);
+			return;
+
     },
 
     // Clear all done todo items, destroying their models.
