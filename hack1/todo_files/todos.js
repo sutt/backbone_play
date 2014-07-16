@@ -369,8 +369,9 @@ $(function(){
 								  });
 				});
 			}
-			
-			this.input.val('');			
+			//finish the same way
+			this.input.val('');	
+			_.invoke(Genes.holdingBool(),'destroy');
 		}
 		if (e.keyCode == 13) return;
 
