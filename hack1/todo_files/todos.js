@@ -1,5 +1,3 @@
-// An example Backbone application contributed by
-// [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses a simple
 
 var maxResults = 5;
 
@@ -314,6 +312,26 @@ $(function(){
 		}
 	},
 
+	popGene: function() {
+		var geneName = 'gltS';
+		//geneList.forEach( function(g) {
+		d3.select('#donut')
+				.select('#outerWheel')
+				//.selectAll('path')
+				.selectAll('#'+geneName)
+					.attr("fill", '#000000');
+		//thisguy.transition().duration(750).styleTween('fill',this.fillTween());
+		//});
+	},
+	
+	fillTween: function(a) {
+	  
+	  console.log('in fill tween' );
+	  //this._current = i(0);
+	  return function(t) {		
+		return '#000000';//arr[Math.round(t*7)];
+	  };
+	},
 	commandType: function(e) {
 		//console.log('commandtype' + e.keyCode);
 		
@@ -347,8 +365,21 @@ $(function(){
 			if ((ind != 0) && (ind != 1)) 
 			   Genes.orderI(ind-1).forEach(function(g){g.selectedToggle();});
 		}
-		
+		//for both highlight gene on wheel
+		if ( ( (e.keyCode == 38) || (e.keyCode ==40) )
+				&& (Genes.getSelectedIndex() != 0) ) {
+				
+			this.popGene();
+			/*
+			Genes.orderI(Genes.getSelectedIndex())
+				 .forEach(function(g){ 
+					console.log(g.get('geneName'));
+					this.popGene(); //g.get('geneName'));
+					});		 
+			*/
+			}
 	},
+	
 	
     inputType: function(e) {
 	

@@ -16,12 +16,11 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 	
 	var pie = d3.layout.pie()
 		//.value(function(d) { return d.apples; })
-		.value(function(d) { return d; })
+		.value(function(d) { return d.geneLen; })
 		.sort(null);
 	
 	
 	var pie2 = d3.layout.pie()
-		//.value(function(d) { return d.apples; })
 		.value(function(d) { return d; })
 		.sort(null);
 	
@@ -33,18 +32,16 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 		.innerRadius(radius - 100)
 		.outerRadius(radius - 60);
 		
-	var svg = d3.select("#donut") //.append("svg")
-		//.attr("width", width)
-		//.attr("height", height)
+	var svg = d3.select("#donut")
 	  .append("g")
-		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+	    .attr("id", "outerWheel");
 	
-	var svg2 = d3.select("#donut") //.append("svg")
-		//.attr("width", width)
-		//.attr("height", height)
+	var svg2 = d3.select("#donut") 
 	  .append("g")
-		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
+		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+		.attr("id", "innerWheel");
+		
 	d3.json("ggboth.json", function(error, data) {
 
 		myDebug = data;
@@ -59,14 +56,19 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 		single_data = _.filter(data, function(x) { 
 										return x[myStr]; } )[0][myStr];
 		
-		my_data = single_data.map( function(x) {return x.geneLen;});
+		my_data = single_data.map( function(x) {
+					return {"geneLen":x.geneLen, 
+							"geneName":x.geneName};
+							});
+		//my_id = single_data.map( function(x) {return x.geneName;});
 		myDebug = my_data;
-	
+		
 		var path = svg.datum(my_data).selectAll("path")
 		  .data(pie)
 		.enter().append("path")
 		  .attr("fill", function(d, i) {  return my_color( i )})
 		  .attr("d", arc)
+		  .attr("id", function(d,i) { return d.data.geneName})
 		  .each(function(d) { this._current = d; }); // store the initial angles
 		
 		
@@ -83,47 +85,30 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 		  .attr("d", arctwo)
 		  .each(function(d) { this._current = d; }); // store the initial angles
 	
-	
+	function pop_gene(geneList) {
+		geneList.forEach( function(g) {
+			svg.selectAll('path')
+				.selectAll(g.geneName)
+				.attr("fill", '#000000')
+		
+		});
+		
+	}
 	
 	function rotate_outer() {
 		
 		pie.startAngle(.5);
 		pie.endAngle(function() { return (Math.PI * 2) + .5});
 		
-		//pie.value(function(d) { return d + (10000); }); // change the value function
-
-		newpath = svg.datum(myDebug).selectAll('path')
+		newpath = svg //datum(myDebug).selectAll('path')
+			.selectAll('path')
 			.data(pie)
 			//.enter() //.append('path')
 			.attr("d",arc);
 		
 		newpath.transition().duration(750).attrTween("d",arcTween);
-			//newpath.transition().duration(750).styleTween("fill",fillTween);
-		
-			//.attr('fill','#000000');
-		//pie.value(function(d) { return d * 10; }); // change the value function
-		//path = path.data(pie); // compute the new angles
-		//path.transition().duration(750).attrTween("d", arcTween); // redraw the a
-		/*
-		path3 = svg.selectAll("path")
-		  .data(pie)
-		.enter().append("path")
-		  .attr("fill", function(d, i) {  return '#FFFFF'})
-		  .attr("d", arc)
-		  .each(function(d) { this._current = d; });
-		  
-		path3.transition().style("fill", '#000000');
-		*/
-	 	
-	/*
-		path = svg.datum(myDebug2).selectAll("path")
-		  .data(pie)
-		.enter().append("path")
-		  .attr("fill", function(d, i) {  return my_color( i )})
-		  .attr("d", arc)
-		  .each(function(d) { this._current = d; });
-	*/	
-	
+		//newpath.transition().duration(750).styleTween("fill",fillTween);
+
 	}
 		
 	});
@@ -145,8 +130,7 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 	  //var i = d3.interpolate(this._current, a);
 	  console.log(this.style('fill'));
 	  //this._current = i(0);
-	  return function(t) {
-		
+	  return function(t) {		
 		return arr[Math.round(t*7)];
 	  };
 	}
