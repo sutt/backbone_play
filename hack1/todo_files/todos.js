@@ -304,13 +304,13 @@ $(function(){
 		//console.log('LS1:' + (localStorage['gene-list'].toString()
 		//						.split(",").length - 1) );
 		
-		
-		//for (i=0; i<Math.min(5,matchG);i++) {
-		matchG.forEach(function(g) { 
-			Genes.create( {geneName: g
+		//myDebug2 = matchG;
+		for (i=0; i<Math.min(5,matchG.length);i++) {
+		//matchG.forEach(function(g) { 
+			Genes.create( {geneName: matchG[i]
 							});
-		});
 		}
+	 }
 	},
 
 	popGene: function(g) {
@@ -329,6 +329,9 @@ $(function(){
 
 					//thisguy.transition().duration(1750).styleTween('fill',this.fillTween());
 		//});
+		d3.select('#donut').select('.labels')
+			.selectAll('#'+g)
+			.style('visibility','visible');
 	},
 	
 	fillTween: function(a) {

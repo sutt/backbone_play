@@ -120,7 +120,8 @@ var arr = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5"
 		.append("text")
 		.attr("font-size", ".85em")
 		.text(function(d) {return d.data.geneName})
-		//.attr("d",arc)
+		.attr("id",function(d) {return d.data.geneName})
+		.style("visibility","hidden")
 		.attr("transform", function(d) {
 		var xoff = (1.1*radius*Math.sin(d.startAngle))-14;
 		var yoff = -1.1*radius*Math.cos(d.startAngle);
