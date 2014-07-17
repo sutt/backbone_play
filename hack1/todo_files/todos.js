@@ -334,6 +334,32 @@ $(function(){
 			.style('visibility','visible');
 	},
 	
+	offGene: function(g) {
+		var arcpop = d3.svg.arc()
+			.innerRadius(radius - 60)
+			.outerRadius(radius - 20);
+		
+		var arr3 = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"];
+		var todo_color = function() {
+			return arr3[Math.round(Math.random()*arr3.length)];
+		};
+		//geneList.forEach( function(g) {
+		  console.log('pop: ' + g);
+			d3.select('#donut')
+				.select('#outerWheel')
+				//.selectAll('path')
+				.selectAll('#'+g)
+					.attr("fill", function() { return todo_color();})
+					.attr("d",arcpop);
+
+					//thisguy.transition().duration(1750).styleTween('fill',this.fillTween());
+		//});
+		d3.select('#donut').select('.labels')
+			.selectAll('#'+g)
+			.style('visibility','hidden');
+	},
+	
+	
 	fillTween: function(a) {
 	  
 	  console.log('in fill tween' );
@@ -359,6 +385,7 @@ $(function(){
 		 //turn off last, ind
 		 if ((ind != 0) && (ind != 5)) 
 			Genes.orderI(ind).forEach(function(g){g.selectedToggle();}); 
+			Genes.orderI(ind).forEach(function(g){ App.offGene(g.get('geneName')) });
 		 //turn on next, ind+1
 		 if (ind !=5) { 
 			Genes.orderI(ind+1).forEach(function(g){g.selectedToggle();});}
@@ -371,6 +398,8 @@ $(function(){
 			//turn off old
 			if (ind != 0) 
 			   Genes.orderI(ind).forEach(function(g){g.selectedToggle();}); 
+				Genes.orderI(ind).forEach(function(g){ App.offGene(g.get('geneName')) });
+			   //App.offGene(ind);
 			//turn on new, ind-1
 			if ((ind != 0) && (ind != 1)) 
 			   Genes.orderI(ind-1).forEach(function(g){g.selectedToggle();});
