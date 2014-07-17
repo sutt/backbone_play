@@ -1,5 +1,6 @@
 
 var maxResults = 5;
+var arr2 = ["#f7fbff","#deebf7","#c6dbef","#9ecae1","#6baed6","#4292c6","#2171b5","#08519c","#08306b"];
 
 $(function(){
 	var searchList;
@@ -312,15 +313,21 @@ $(function(){
 		}
 	},
 
-	popGene: function() {
-		var geneName = 'gltS';
+	popGene: function(g) {
+		var arcpop = d3.svg.arc()
+			.innerRadius(radius - 60)
+			.outerRadius(radius + 5);
+	
 		//geneList.forEach( function(g) {
-		d3.select('#donut')
+		  console.log('pop: ' + g);
+			d3.select('#donut')
 				.select('#outerWheel')
 				//.selectAll('path')
-				.selectAll('#'+geneName)
-					.attr("fill", '#000000');
-		//thisguy.transition().duration(750).styleTween('fill',this.fillTween());
+				.selectAll('#'+g)
+					.attr("fill", '#000000')
+					.attr("d",arcpop);
+
+					//thisguy.transition().duration(1750).styleTween('fill',this.fillTween());
 		//});
 	},
 	
@@ -329,7 +336,7 @@ $(function(){
 	  console.log('in fill tween' );
 	  //this._current = i(0);
 	  return function(t) {		
-		return '#000000';//arr[Math.round(t*7)];
+		return arr2[Math.round(t*7)];
 	  };
 	},
 	commandType: function(e) {
@@ -368,15 +375,11 @@ $(function(){
 		//for both highlight gene on wheel
 		if ( ( (e.keyCode == 38) || (e.keyCode ==40) )
 				&& (Genes.getSelectedIndex() != 0) ) {
-				
-			this.popGene();
-			/*
+			
 			Genes.orderI(Genes.getSelectedIndex())
 				 .forEach(function(g){ 
-					console.log(g.get('geneName'));
-					this.popGene(); //g.get('geneName'));
-					});		 
-			*/
+					App.popGene(g.get('geneName'));
+				});		 
 			}
 	},
 	

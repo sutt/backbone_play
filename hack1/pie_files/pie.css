@@ -12,15 +12,11 @@
 		}
 */
 		
-		#apples_form {
-		  position: relative;
-		  /* right: 10px; */
-		  top: 10px;
-		}
+	
 		
 		#donut {
 		position:relative;
-		height:500px;
-		width:500px;
+		height:750px;
+		width:750px;
 		
 		}
